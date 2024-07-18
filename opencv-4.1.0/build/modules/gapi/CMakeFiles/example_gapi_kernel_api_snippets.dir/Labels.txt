@@ -1,0 +1,9 @@
+# Target labels
+ Main
+ opencv_gapi
+ Sample
+# Source files and their labels
+/home/linlin/Documents/OpenCV/opencv-4.1.0/modules/gapi/samples/kernel_api_snippets.cpp
+ Main
+ opencv_gapi
+ Sample

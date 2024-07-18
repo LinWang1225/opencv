@@ -1,0 +1,872 @@
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: note: unrecognized command-line option '-Wno-unnamed-type-template-args' may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor  -Wno-unnamed-type-template-args'
+===== BUILD LOG =====
+Change Dir: /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_bedee/fast && /usr/bin/make -f CMakeFiles/cmTC_bedee.dir/build.make CMakeFiles/cmTC_bedee.dir/build
+make[1]: Entering directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_bedee.dir/src.cxx.o
+/toolchain/bin/riscv64-unknown-linux-gnu-g++    -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor  -Wno-unnamed-type-template-args -std=c++11 -o CMakeFiles/cmTC_bedee.dir/src.cxx.o -c /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/src.cxx
+cc1plus: warning: command-line option '-Wmissing-prototypes' is valid for C/ObjC but not for C++
+cc1plus: warning: command-line option '-Wstrict-prototypes' is valid for C/ObjC but not for C++
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring '#pragma  ' [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: note: unrecognized command-line option '-Wno-unnamed-type-template-args' may have been intended to silence earlier diagnostics
+Linking CXX executable cmTC_bedee
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bedee.dir/link.txt --verbose=1
+/toolchain/bin/riscv64-unknown-linux-gnu-g++    -O3 -DNDEBUG    CMakeFiles/cmTC_bedee.dir/src.cxx.o  -o cmTC_bedee 
+make[1]: Leaving directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1: note: unrecognized command-line option '-Wno-unnamed-type-template-args' may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor  -Wno-unnamed-type-template-args'
+===== BUILD LOG =====
+Change Dir: /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_97a46/fast && /usr/bin/make -f CMakeFiles/cmTC_97a46.dir/build.make CMakeFiles/cmTC_97a46.dir/build
+make[1]: Entering directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_97a46.dir/src.c.o
+/toolchain/bin/riscv64-unknown-linux-gnu-gcc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor  -Wno-unnamed-type-template-args -o CMakeFiles/cmTC_97a46.dir/src.c.o   -c /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: '-Werror=' argument '-Werror=non-virtual-dtor' is not valid for C
+cc1: warning: command-line option '-Wsign-promo' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wsuggest-override' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wno-delete-non-virtual-dtor' is valid for C++/ObjC++ but not for C
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring '#pragma  ' [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1: note: unrecognized command-line option '-Wno-unnamed-type-template-args' may have been intended to silence earlier diagnostics
+Linking C executable cmTC_97a46
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_97a46.dir/link.txt --verbose=1
+/toolchain/bin/riscv64-unknown-linux-gnu-gcc   -O3 -DNDEBUG    CMakeFiles/cmTC_97a46.dir/src.c.o  -o cmTC_97a46 
+make[1]: Leaving directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Determining size of off64_t failed with the following output:
+Change Dir: /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8c89b/fast && /usr/bin/make -f CMakeFiles/cmTC_8c89b.dir/build.make CMakeFiles/cmTC_8c89b.dir/build
+make[1]: Entering directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8c89b.dir/OFF64_T.c.o
+/toolchain/bin/riscv64-unknown-linux-gnu-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_8c89b.dir/OFF64_T.c.o   -c /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CheckTypeSize/OFF64_T.c
+cc1: warning: '-Werror=' argument '-Werror=non-virtual-dtor' is not valid for C
+cc1: warning: command-line option '-Wsign-promo' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wsuggest-override' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wno-delete-non-virtual-dtor' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-fvisibility-inlines-hidden' is valid for C++/ObjC++ but not for C
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CheckTypeSize/OFF64_T.c:23:22: error: 'off64_t' undeclared here (not in a function); did you mean 'off_t'?
+   23 | #define SIZE (sizeof(off64_t))
+      |                      ^~~~~~~
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CheckTypeSize/OFF64_T.c:25:12: note: in expansion of macro 'SIZE'
+   25 |   ('0' + ((SIZE / 10000)%10)),
+      |            ^~~~
+make[1]: *** [CMakeFiles/cmTC_8c89b.dir/build.make:66: CMakeFiles/cmTC_8c89b.dir/OFF64_T.c.o] Error 1
+make[1]: Leaving directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_8c89b/fast] Error 2
+
+
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CheckTypeSize/OFF64_T.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(off64_t))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1: note: unrecognized command-line option '-Wno-shorten-64-to-32' may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -Wno-shorten-64-to-32'
+===== BUILD LOG =====
+Change Dir: /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f16cb/fast && /usr/bin/make -f CMakeFiles/cmTC_f16cb.dir/build.make CMakeFiles/cmTC_f16cb.dir/build
+make[1]: Entering directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f16cb.dir/src.c.o
+/toolchain/bin/riscv64-unknown-linux-gnu-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden  -O3 -DNDEBUG -fPIE    -Wno-shorten-64-to-32 -o CMakeFiles/cmTC_f16cb.dir/src.c.o   -c /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: '-Werror=' argument '-Werror=non-virtual-dtor' is not valid for C
+cc1: warning: command-line option '-Wsign-promo' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wsuggest-override' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wno-delete-non-virtual-dtor' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-fvisibility-inlines-hidden' is valid for C++/ObjC++ but not for C
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring '#pragma  ' [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1: note: unrecognized command-line option '-Wno-shorten-64-to-32' may have been intended to silence earlier diagnostics
+Linking C executable cmTC_f16cb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f16cb.dir/link.txt --verbose=1
+/toolchain/bin/riscv64-unknown-linux-gnu-gcc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_f16cb.dir/src.c.o  -o cmTC_f16cb 
+make[1]: Leaving directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Determining if the include file io.h exists failed with the following output:
+Change Dir: /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_071fd/fast && /usr/bin/make -f CMakeFiles/cmTC_071fd.dir/build.make CMakeFiles/cmTC_071fd.dir/build
+make[1]: Entering directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_071fd.dir/CheckIncludeFile.c.o
+/toolchain/bin/riscv64-unknown-linux-gnu-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_071fd.dir/CheckIncludeFile.c.o   -c /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+cc1: warning: '-Werror=' argument '-Werror=non-virtual-dtor' is not valid for C
+cc1: warning: command-line option '-Wsign-promo' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wsuggest-override' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wno-delete-non-virtual-dtor' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-fvisibility-inlines-hidden' is valid for C++/ObjC++ but not for C
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: io.h: No such file or directory
+    1 | #include <io.h>
+      |          ^~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_071fd.dir/build.make:66: CMakeFiles/cmTC_071fd.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_071fd/fast] Error 2
+
+
+
+Determining size of INT8 failed with the following output:
+Change Dir: /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_72917/fast && /usr/bin/make -f CMakeFiles/cmTC_72917.dir/build.make CMakeFiles/cmTC_72917.dir/build
+make[1]: Entering directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_72917.dir/int8.c.o
+/toolchain/bin/riscv64-unknown-linux-gnu-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_72917.dir/int8.c.o   -c /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CheckTypeSize/int8.c
+cc1: warning: '-Werror=' argument '-Werror=non-virtual-dtor' is not valid for C
+cc1: warning: command-line option '-Wsign-promo' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wsuggest-override' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wno-delete-non-virtual-dtor' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-fvisibility-inlines-hidden' is valid for C++/ObjC++ but not for C
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CheckTypeSize/int8.c:23:22: error: 'INT8' undeclared here (not in a function); did you mean 'INT8_C'?
+   23 | #define SIZE (sizeof(INT8))
+      |                      ^~~~
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CheckTypeSize/int8.c:25:12: note: in expansion of macro 'SIZE'
+   25 |   ('0' + ((SIZE / 10000)%10)),
+      |            ^~~~
+make[1]: *** [CMakeFiles/cmTC_72917.dir/build.make:66: CMakeFiles/cmTC_72917.dir/int8.c.o] Error 1
+make[1]: Leaving directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_72917/fast] Error 2
+
+
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CheckTypeSize/int8.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(INT8))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of INT16 failed with the following output:
+Change Dir: /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_bdbda/fast && /usr/bin/make -f CMakeFiles/cmTC_bdbda.dir/build.make CMakeFiles/cmTC_bdbda.dir/build
+make[1]: Entering directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bdbda.dir/int16.c.o
+/toolchain/bin/riscv64-unknown-linux-gnu-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_bdbda.dir/int16.c.o   -c /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CheckTypeSize/int16.c
+cc1: warning: '-Werror=' argument '-Werror=non-virtual-dtor' is not valid for C
+cc1: warning: command-line option '-Wsign-promo' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wsuggest-override' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wno-delete-non-virtual-dtor' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-fvisibility-inlines-hidden' is valid for C++/ObjC++ but not for C
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CheckTypeSize/int16.c:23:22: error: 'INT16' undeclared here (not in a function); did you mean 'INT16_C'?
+   23 | #define SIZE (sizeof(INT16))
+      |                      ^~~~~
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CheckTypeSize/int16.c:25:12: note: in expansion of macro 'SIZE'
+   25 |   ('0' + ((SIZE / 10000)%10)),
+      |            ^~~~
+make[1]: *** [CMakeFiles/cmTC_bdbda.dir/build.make:66: CMakeFiles/cmTC_bdbda.dir/int16.c.o] Error 1
+make[1]: Leaving directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_bdbda/fast] Error 2
+
+
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CheckTypeSize/int16.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(INT16))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of INT32 failed with the following output:
+Change Dir: /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a0f46/fast && /usr/bin/make -f CMakeFiles/cmTC_a0f46.dir/build.make CMakeFiles/cmTC_a0f46.dir/build
+make[1]: Entering directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a0f46.dir/int32.c.o
+/toolchain/bin/riscv64-unknown-linux-gnu-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_a0f46.dir/int32.c.o   -c /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CheckTypeSize/int32.c
+cc1: warning: '-Werror=' argument '-Werror=non-virtual-dtor' is not valid for C
+cc1: warning: command-line option '-Wsign-promo' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wsuggest-override' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wno-delete-non-virtual-dtor' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-fvisibility-inlines-hidden' is valid for C++/ObjC++ but not for C
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CheckTypeSize/int32.c:23:22: error: 'INT32' undeclared here (not in a function); did you mean 'INT32_C'?
+   23 | #define SIZE (sizeof(INT32))
+      |                      ^~~~~
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CheckTypeSize/int32.c:25:12: note: in expansion of macro 'SIZE'
+   25 |   ('0' + ((SIZE / 10000)%10)),
+      |            ^~~~
+make[1]: *** [CMakeFiles/cmTC_a0f46.dir/build.make:66: CMakeFiles/cmTC_a0f46.dir/int32.c.o] Error 1
+make[1]: Leaving directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_a0f46/fast] Error 2
+
+
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CheckTypeSize/int32.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(INT32))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the function floor exists failed with the following output:
+Change Dir: /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_9226d/fast && /usr/bin/make -f CMakeFiles/cmTC_9226d.dir/build.make CMakeFiles/cmTC_9226d.dir/build
+make[1]: Entering directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9226d.dir/CheckFunctionExists.c.o
+/toolchain/bin/riscv64-unknown-linux-gnu-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -DCHECK_FUNCTION_EXISTS=floor -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_9226d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+cc1: warning: '-Werror=' argument '-Werror=non-virtual-dtor' is not valid for C
+cc1: warning: command-line option '-Wsign-promo' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wsuggest-override' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wno-delete-non-virtual-dtor' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-fvisibility-inlines-hidden' is valid for C++/ObjC++ but not for C
+<command-line>: warning: conflicting types for built-in function 'floor'; expected 'double(double)' [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro 'CHECK_FUNCTION_EXISTS'
+    7 |   CHECK_FUNCTION_EXISTS(void);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:1:1: note: 'floor' is declared in header '<math.h>'
+  +++ |+#include <math.h>
+    1 | #ifdef CHECK_FUNCTION_EXISTS
+Linking C executable cmTC_9226d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9226d.dir/link.txt --verbose=1
+/toolchain/bin/riscv64-unknown-linux-gnu-gcc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -DCHECK_FUNCTION_EXISTS=floor -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_9226d.dir/CheckFunctionExists.c.o  -o cmTC_9226d 
+/toolchain/bin/../lib/gcc/riscv64-unknown-linux-gnu/10.4.0/../../../../riscv64-unknown-linux-gnu/bin/ld: CMakeFiles/cmTC_9226d.dir/CheckFunctionExists.c.o:(.text.startup.main+0xc): undefined reference to `floor'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_9226d.dir/build.make:87: cmTC_9226d] Error 1
+make[1]: Leaving directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_9226d/fast] Error 2
+
+
+
+Determining if the function pow exists failed with the following output:
+Change Dir: /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b57fe/fast && /usr/bin/make -f CMakeFiles/cmTC_b57fe.dir/build.make CMakeFiles/cmTC_b57fe.dir/build
+make[1]: Entering directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b57fe.dir/CheckFunctionExists.c.o
+/toolchain/bin/riscv64-unknown-linux-gnu-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -DCHECK_FUNCTION_EXISTS=pow -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_b57fe.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+cc1: warning: '-Werror=' argument '-Werror=non-virtual-dtor' is not valid for C
+cc1: warning: command-line option '-Wsign-promo' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wsuggest-override' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wno-delete-non-virtual-dtor' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-fvisibility-inlines-hidden' is valid for C++/ObjC++ but not for C
+<command-line>: warning: conflicting types for built-in function 'pow'; expected 'double(double,  double)' [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro 'CHECK_FUNCTION_EXISTS'
+    7 |   CHECK_FUNCTION_EXISTS(void);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:1:1: note: 'pow' is declared in header '<math.h>'
+  +++ |+#include <math.h>
+    1 | #ifdef CHECK_FUNCTION_EXISTS
+Linking C executable cmTC_b57fe
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b57fe.dir/link.txt --verbose=1
+/toolchain/bin/riscv64-unknown-linux-gnu-gcc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -DCHECK_FUNCTION_EXISTS=pow -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_b57fe.dir/CheckFunctionExists.c.o  -o cmTC_b57fe 
+/toolchain/bin/../lib/gcc/riscv64-unknown-linux-gnu/10.4.0/../../../../riscv64-unknown-linux-gnu/bin/ld: CMakeFiles/cmTC_b57fe.dir/CheckFunctionExists.c.o:(.text.startup.main+0xc): undefined reference to `pow'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_b57fe.dir/build.make:87: cmTC_b57fe] Error 1
+make[1]: Leaving directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_b57fe/fast] Error 2
+
+
+
+Determining if the function sqrt exists failed with the following output:
+Change Dir: /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_68569/fast && /usr/bin/make -f CMakeFiles/cmTC_68569.dir/build.make CMakeFiles/cmTC_68569.dir/build
+make[1]: Entering directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_68569.dir/CheckFunctionExists.c.o
+/toolchain/bin/riscv64-unknown-linux-gnu-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -DCHECK_FUNCTION_EXISTS=sqrt -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_68569.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+cc1: warning: '-Werror=' argument '-Werror=non-virtual-dtor' is not valid for C
+cc1: warning: command-line option '-Wsign-promo' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wsuggest-override' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wno-delete-non-virtual-dtor' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-fvisibility-inlines-hidden' is valid for C++/ObjC++ but not for C
+<command-line>: warning: conflicting types for built-in function 'sqrt'; expected 'double(double)' [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro 'CHECK_FUNCTION_EXISTS'
+    7 |   CHECK_FUNCTION_EXISTS(void);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:1:1: note: 'sqrt' is declared in header '<math.h>'
+  +++ |+#include <math.h>
+    1 | #ifdef CHECK_FUNCTION_EXISTS
+Linking C executable cmTC_68569
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_68569.dir/link.txt --verbose=1
+/toolchain/bin/riscv64-unknown-linux-gnu-gcc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -DCHECK_FUNCTION_EXISTS=sqrt -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_68569.dir/CheckFunctionExists.c.o  -o cmTC_68569 
+/toolchain/bin/../lib/gcc/riscv64-unknown-linux-gnu/10.4.0/../../../../riscv64-unknown-linux-gnu/bin/ld: CMakeFiles/cmTC_68569.dir/CheckFunctionExists.c.o:(.text.startup.main+0xc): undefined reference to `sqrt'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_68569.dir/build.make:87: cmTC_68569] Error 1
+make[1]: Leaving directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_68569/fast] Error 2
+
+
+
+Determining if the function setmode exists failed with the following output:
+Change Dir: /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_4eb1f/fast && /usr/bin/make -f CMakeFiles/cmTC_4eb1f.dir/build.make CMakeFiles/cmTC_4eb1f.dir/build
+make[1]: Entering directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4eb1f.dir/CheckFunctionExists.c.o
+/toolchain/bin/riscv64-unknown-linux-gnu-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -DCHECK_FUNCTION_EXISTS=setmode -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_4eb1f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+cc1: warning: '-Werror=' argument '-Werror=non-virtual-dtor' is not valid for C
+cc1: warning: command-line option '-Wsign-promo' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wsuggest-override' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wno-delete-non-virtual-dtor' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-fvisibility-inlines-hidden' is valid for C++/ObjC++ but not for C
+Linking C executable cmTC_4eb1f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4eb1f.dir/link.txt --verbose=1
+/toolchain/bin/riscv64-unknown-linux-gnu-gcc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -DCHECK_FUNCTION_EXISTS=setmode -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_4eb1f.dir/CheckFunctionExists.c.o  -o cmTC_4eb1f 
+/toolchain/bin/../lib/gcc/riscv64-unknown-linux-gnu/10.4.0/../../../../riscv64-unknown-linux-gnu/bin/ld: CMakeFiles/cmTC_4eb1f.dir/CheckFunctionExists.c.o:(.text.startup.main+0xc): undefined reference to `setmode'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_4eb1f.dir/build.make:87: cmTC_4eb1f] Error 1
+make[1]: Leaving directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_4eb1f/fast] Error 2
+
+
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: note: unrecognized command-line option '-Wno-inconsistent-missing-override' may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-inconsistent-missing-override'
+===== BUILD LOG =====
+Change Dir: /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_dcf8b/fast && /usr/bin/make -f CMakeFiles/cmTC_dcf8b.dir/build.make CMakeFiles/cmTC_dcf8b.dir/build
+make[1]: Entering directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_dcf8b.dir/src.cxx.o
+/toolchain/bin/riscv64-unknown-linux-gnu-g++    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-prototypes -Wstrict-prototypes -Winit-self -Wpointer-arith -Wsign-promo -Winit-self -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-shadow -Wno-unused -Wno-sign-compare -Wno-undef -Wno-missing-declarations -Wno-uninitialized -Wno-switch -Wno-parentheses -Wno-array-bounds -Wno-extra -Wno-deprecated-declarations -Wno-misleading-indentation -Wno-deprecated -Wno-suggest-override  -O3 -DNDEBUG -fPIE    -Wno-inconsistent-missing-override -std=c++11 -o CMakeFiles/cmTC_dcf8b.dir/src.cxx.o -c /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/src.cxx
+cc1plus: warning: command-line option '-Wmissing-prototypes' is valid for C/ObjC but not for C++
+cc1plus: warning: command-line option '-Wstrict-prototypes' is valid for C/ObjC but not for C++
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring '#pragma  ' [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: note: unrecognized command-line option '-Wno-inconsistent-missing-override' may have been intended to silence earlier diagnostics
+Linking CXX executable cmTC_dcf8b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dcf8b.dir/link.txt --verbose=1
+/toolchain/bin/riscv64-unknown-linux-gnu-g++     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-prototypes -Wstrict-prototypes -Winit-self -Wpointer-arith -Wsign-promo -Winit-self -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-shadow -Wno-unused -Wno-sign-compare -Wno-undef -Wno-missing-declarations -Wno-uninitialized -Wno-switch -Wno-parentheses -Wno-array-bounds -Wno-extra -Wno-deprecated-declarations -Wno-misleading-indentation -Wno-deprecated -Wno-suggest-override  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_dcf8b.dir/src.cxx.o  -o cmTC_dcf8b 
+make[1]: Leaving directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Determining if the function sgemm_ exists failed with the following output:
+Change Dir: /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c8630/fast && /usr/bin/make -f CMakeFiles/cmTC_c8630.dir/build.make CMakeFiles/cmTC_c8630.dir/build
+make[1]: Entering directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c8630.dir/CheckFunctionExists.c.o
+/toolchain/bin/riscv64-unknown-linux-gnu-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -DCHECK_FUNCTION_EXISTS=sgemm_ -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_c8630.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+cc1: warning: '-Werror=' argument '-Werror=non-virtual-dtor' is not valid for C
+cc1: warning: command-line option '-Wsign-promo' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wsuggest-override' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wno-delete-non-virtual-dtor' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-fvisibility-inlines-hidden' is valid for C++/ObjC++ but not for C
+Linking C executable cmTC_c8630
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c8630.dir/link.txt --verbose=1
+/toolchain/bin/riscv64-unknown-linux-gnu-gcc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -DCHECK_FUNCTION_EXISTS=sgemm_ -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_c8630.dir/CheckFunctionExists.c.o  -o cmTC_c8630 
+/toolchain/bin/../lib/gcc/riscv64-unknown-linux-gnu/10.4.0/../../../../riscv64-unknown-linux-gnu/bin/ld: CMakeFiles/cmTC_c8630.dir/CheckFunctionExists.c.o:(.text.startup.main+0xc): undefined reference to `sgemm_'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_c8630.dir/build.make:87: cmTC_c8630] Error 1
+make[1]: Leaving directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_c8630/fast] Error 2
+
+
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: note: unrecognized command-line option '-Wno-tautological-undefined-compare' may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-tautological-undefined-compare'
+===== BUILD LOG =====
+Change Dir: /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_2774e/fast && /usr/bin/make -f CMakeFiles/cmTC_2774e.dir/build.make CMakeFiles/cmTC_2774e.dir/build
+make[1]: Entering directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2774e.dir/src.cxx.o
+/toolchain/bin/riscv64-unknown-linux-gnu-g++    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wstrict-prototypes -Winit-self -Wpointer-arith -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-prototypes -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef  -O3 -DNDEBUG -fPIE    -Wno-tautological-undefined-compare -std=c++11 -o CMakeFiles/cmTC_2774e.dir/src.cxx.o -c /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/src.cxx
+cc1plus: warning: command-line option '-Wstrict-prototypes' is valid for C/ObjC but not for C++
+cc1plus: warning: command-line option '-Wno-missing-prototypes' is valid for C/ObjC but not for C++
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring '#pragma  ' [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: note: unrecognized command-line option '-Wno-tautological-undefined-compare' may have been intended to silence earlier diagnostics
+Linking CXX executable cmTC_2774e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2774e.dir/link.txt --verbose=1
+/toolchain/bin/riscv64-unknown-linux-gnu-g++     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wstrict-prototypes -Winit-self -Wpointer-arith -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-prototypes -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_2774e.dir/src.cxx.o  -o cmTC_2774e 
+make[1]: Leaving directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: note: unrecognized command-line option '-Wno-shorten-64-to-32' may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-shorten-64-to-32'
+===== BUILD LOG =====
+Change Dir: /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_59fec/fast && /usr/bin/make -f CMakeFiles/cmTC_59fec.dir/build.make CMakeFiles/cmTC_59fec.dir/build
+make[1]: Entering directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_59fec.dir/src.cxx.o
+/toolchain/bin/riscv64-unknown-linux-gnu-g++    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wstrict-prototypes -Winit-self -Wpointer-arith -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-prototypes -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable  -O3 -DNDEBUG -fPIE    -Wno-shorten-64-to-32 -std=c++11 -o CMakeFiles/cmTC_59fec.dir/src.cxx.o -c /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/src.cxx
+cc1plus: warning: command-line option '-Wstrict-prototypes' is valid for C/ObjC but not for C++
+cc1plus: warning: command-line option '-Wno-missing-prototypes' is valid for C/ObjC but not for C++
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring '#pragma  ' [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: note: unrecognized command-line option '-Wno-shorten-64-to-32' may have been intended to silence earlier diagnostics
+Linking CXX executable cmTC_59fec
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_59fec.dir/link.txt --verbose=1
+/toolchain/bin/riscv64-unknown-linux-gnu-g++     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wstrict-prototypes -Winit-self -Wpointer-arith -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-prototypes -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_59fec.dir/src.cxx.o  -o cmTC_59fec 
+make[1]: Leaving directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: note: unrecognized command-line option '-Wno-enum-compare-switch' may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-enum-compare-switch'
+===== BUILD LOG =====
+Change Dir: /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_664d5/fast && /usr/bin/make -f CMakeFiles/cmTC_664d5.dir/build.make CMakeFiles/cmTC_664d5.dir/build
+make[1]: Entering directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_664d5.dir/src.cxx.o
+/toolchain/bin/riscv64-unknown-linux-gnu-g++    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wstrict-prototypes -Winit-self -Wpointer-arith -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-prototypes -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable -Wno-invalid-offsetof  -O3 -DNDEBUG -fPIE    -Wno-enum-compare-switch -std=c++11 -o CMakeFiles/cmTC_664d5.dir/src.cxx.o -c /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/src.cxx
+cc1plus: warning: command-line option '-Wstrict-prototypes' is valid for C/ObjC but not for C++
+cc1plus: warning: command-line option '-Wno-missing-prototypes' is valid for C/ObjC but not for C++
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring '#pragma  ' [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: note: unrecognized command-line option '-Wno-enum-compare-switch' may have been intended to silence earlier diagnostics
+Linking CXX executable cmTC_664d5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_664d5.dir/link.txt --verbose=1
+/toolchain/bin/riscv64-unknown-linux-gnu-g++     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wstrict-prototypes -Winit-self -Wpointer-arith -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-prototypes -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable -Wno-invalid-offsetof  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_664d5.dir/src.cxx.o  -o cmTC_664d5 
+make[1]: Leaving directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c7656/fast && /usr/bin/make -f CMakeFiles/cmTC_c7656.dir/build.make CMakeFiles/cmTC_c7656.dir/build
+make[1]: Entering directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c7656.dir/CheckIncludeFile.c.o
+/toolchain/bin/riscv64-unknown-linux-gnu-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_c7656.dir/CheckIncludeFile.c.o   -c /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+cc1: warning: '-Werror=' argument '-Werror=non-virtual-dtor' is not valid for C
+cc1: warning: command-line option '-Wsign-promo' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wsuggest-override' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wno-delete-non-virtual-dtor' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-fvisibility-inlines-hidden' is valid for C++/ObjC++ but not for C
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: sys/videoio.h: No such file or directory
+    1 | #include <sys/videoio.h>
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_c7656.dir/build.make:66: CMakeFiles/cmTC_c7656.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_c7656/fast] Error 2
+
+
+
+Determining if the CL_VERSION_2_2 exist failed with the following output:
+Change Dir: /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ca5fb/fast && /usr/bin/make -f CMakeFiles/cmTC_ca5fb.dir/build.make CMakeFiles/cmTC_ca5fb.dir/build
+make[1]: Entering directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ca5fb.dir/CheckSymbolExists.c.o
+/toolchain/bin/riscv64-unknown-linux-gnu-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_ca5fb.dir/CheckSymbolExists.c.o   -c /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+cc1: warning: '-Werror=' argument '-Werror=non-virtual-dtor' is not valid for C
+cc1: warning: command-line option '-Wsign-promo' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wsuggest-override' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wno-delete-non-virtual-dtor' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-fvisibility-inlines-hidden' is valid for C++/ObjC++ but not for C
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:10: fatal error: OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h: No such file or directory
+    2 | #include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_ca5fb.dir/build.make:66: CMakeFiles/cmTC_ca5fb.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_ca5fb/fast] Error 2
+
+
+File /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CL_VERSION_2_2
+  return ((int*)(&CL_VERSION_2_2))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the CL_VERSION_2_1 exist failed with the following output:
+Change Dir: /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_05074/fast && /usr/bin/make -f CMakeFiles/cmTC_05074.dir/build.make CMakeFiles/cmTC_05074.dir/build
+make[1]: Entering directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_05074.dir/CheckSymbolExists.c.o
+/toolchain/bin/riscv64-unknown-linux-gnu-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_05074.dir/CheckSymbolExists.c.o   -c /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+cc1: warning: '-Werror=' argument '-Werror=non-virtual-dtor' is not valid for C
+cc1: warning: command-line option '-Wsign-promo' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wsuggest-override' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wno-delete-non-virtual-dtor' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-fvisibility-inlines-hidden' is valid for C++/ObjC++ but not for C
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:10: fatal error: OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h: No such file or directory
+    2 | #include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_05074.dir/build.make:66: CMakeFiles/cmTC_05074.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_05074/fast] Error 2
+
+
+File /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CL_VERSION_2_1
+  return ((int*)(&CL_VERSION_2_1))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the CL_VERSION_2_0 exist failed with the following output:
+Change Dir: /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_77a4b/fast && /usr/bin/make -f CMakeFiles/cmTC_77a4b.dir/build.make CMakeFiles/cmTC_77a4b.dir/build
+make[1]: Entering directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_77a4b.dir/CheckSymbolExists.c.o
+/toolchain/bin/riscv64-unknown-linux-gnu-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_77a4b.dir/CheckSymbolExists.c.o   -c /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+cc1: warning: '-Werror=' argument '-Werror=non-virtual-dtor' is not valid for C
+cc1: warning: command-line option '-Wsign-promo' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wsuggest-override' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wno-delete-non-virtual-dtor' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-fvisibility-inlines-hidden' is valid for C++/ObjC++ but not for C
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:10: fatal error: OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h: No such file or directory
+    2 | #include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_77a4b.dir/build.make:66: CMakeFiles/cmTC_77a4b.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_77a4b/fast] Error 2
+
+
+File /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CL_VERSION_2_0
+  return ((int*)(&CL_VERSION_2_0))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the CL_VERSION_1_2 exist failed with the following output:
+Change Dir: /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_64dd2/fast && /usr/bin/make -f CMakeFiles/cmTC_64dd2.dir/build.make CMakeFiles/cmTC_64dd2.dir/build
+make[1]: Entering directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_64dd2.dir/CheckSymbolExists.c.o
+/toolchain/bin/riscv64-unknown-linux-gnu-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_64dd2.dir/CheckSymbolExists.c.o   -c /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+cc1: warning: '-Werror=' argument '-Werror=non-virtual-dtor' is not valid for C
+cc1: warning: command-line option '-Wsign-promo' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wsuggest-override' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wno-delete-non-virtual-dtor' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-fvisibility-inlines-hidden' is valid for C++/ObjC++ but not for C
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:10: fatal error: OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h: No such file or directory
+    2 | #include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_64dd2.dir/build.make:66: CMakeFiles/cmTC_64dd2.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_64dd2/fast] Error 2
+
+
+File /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CL_VERSION_1_2
+  return ((int*)(&CL_VERSION_1_2))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the CL_VERSION_1_1 exist failed with the following output:
+Change Dir: /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_684fe/fast && /usr/bin/make -f CMakeFiles/cmTC_684fe.dir/build.make CMakeFiles/cmTC_684fe.dir/build
+make[1]: Entering directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_684fe.dir/CheckSymbolExists.c.o
+/toolchain/bin/riscv64-unknown-linux-gnu-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_684fe.dir/CheckSymbolExists.c.o   -c /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+cc1: warning: '-Werror=' argument '-Werror=non-virtual-dtor' is not valid for C
+cc1: warning: command-line option '-Wsign-promo' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wsuggest-override' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wno-delete-non-virtual-dtor' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-fvisibility-inlines-hidden' is valid for C++/ObjC++ but not for C
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:10: fatal error: OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h: No such file or directory
+    2 | #include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_684fe.dir/build.make:66: CMakeFiles/cmTC_684fe.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_684fe/fast] Error 2
+
+
+File /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CL_VERSION_1_1
+  return ((int*)(&CL_VERSION_1_1))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the CL_VERSION_1_0 exist failed with the following output:
+Change Dir: /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6d6e0/fast && /usr/bin/make -f CMakeFiles/cmTC_6d6e0.dir/build.make CMakeFiles/cmTC_6d6e0.dir/build
+make[1]: Entering directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6d6e0.dir/CheckSymbolExists.c.o
+/toolchain/bin/riscv64-unknown-linux-gnu-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_6d6e0.dir/CheckSymbolExists.c.o   -c /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+cc1: warning: '-Werror=' argument '-Werror=non-virtual-dtor' is not valid for C
+cc1: warning: command-line option '-Wsign-promo' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wsuggest-override' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-Wno-delete-non-virtual-dtor' is valid for C++/ObjC++ but not for C
+cc1: warning: command-line option '-fvisibility-inlines-hidden' is valid for C++/ObjC++ but not for C
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:10: fatal error: OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h: No such file or directory
+    2 | #include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_6d6e0.dir/build.make:66: CMakeFiles/cmTC_6d6e0.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_6d6e0/fast] Error 2
+
+
+File /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CL_VERSION_1_0
+  return ((int*)(&CL_VERSION_1_0))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
