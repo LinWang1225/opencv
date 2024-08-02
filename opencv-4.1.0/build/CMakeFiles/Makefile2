@@ -518,6 +518,7 @@ modules/all: modules/reg/all
 modules/all: modules/surface_matching/all
 modules/all: modules/xphoto/all
 modules/all: modules/dnn/all
+modules/all: modules/freetype/all
 modules/all: modules/fuzzy/all
 modules/all: modules/gapi/all
 modules/all: modules/hfs/all
@@ -642,6 +643,7 @@ modules/preinstall: modules/reg/preinstall
 modules/preinstall: modules/surface_matching/preinstall
 modules/preinstall: modules/xphoto/preinstall
 modules/preinstall: modules/dnn/preinstall
+modules/preinstall: modules/freetype/preinstall
 modules/preinstall: modules/fuzzy/preinstall
 modules/preinstall: modules/gapi/preinstall
 modules/preinstall: modules/hfs/preinstall
@@ -767,6 +769,7 @@ modules/clean: modules/reg/clean
 modules/clean: modules/surface_matching/clean
 modules/clean: modules/xphoto/clean
 modules/clean: modules/dnn/clean
+modules/clean: modules/freetype/clean
 modules/clean: modules/fuzzy/clean
 modules/clean: modules/gapi/clean
 modules/clean: modules/hfs/clean
@@ -2571,6 +2574,24 @@ modules/flann/clean: modules/flann/CMakeFiles/opencv_flann.dir/clean
 .PHONY : modules/flann/clean
 
 #=============================================================================
+# Directory level rules for directory modules/freetype
+
+# Recursive "all" directory target.
+modules/freetype/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
+
+.PHONY : modules/freetype/all
+
+# Recursive "preinstall" directory target.
+modules/freetype/preinstall:
+
+.PHONY : modules/freetype/preinstall
+
+# Recursive "clean" directory target.
+modules/freetype/clean: modules/freetype/CMakeFiles/opencv_freetype.dir/clean
+
+.PHONY : modules/freetype/clean
+
+#=============================================================================
 # Directory level rules for directory modules/fuzzy
 
 # Recursive "all" directory target.
@@ -4122,6 +4143,7 @@ CMakeFiles/opencv_modules.dir/all: modules/reg/CMakeFiles/opencv_reg.dir/all
 CMakeFiles/opencv_modules.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 CMakeFiles/opencv_modules.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 CMakeFiles/opencv_modules.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+CMakeFiles/opencv_modules.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 CMakeFiles/opencv_modules.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 CMakeFiles/opencv_modules.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 CMakeFiles/opencv_modules.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -4295,6 +4317,10 @@ CMakeFiles/opencv_perf_tests.dir/clean:
 # Target rules for target CMakeFiles/opencv_samples.dir
 
 # All Build rule for target.
+CMakeFiles/opencv_samples.dir/all: samples/cpp/CMakeFiles/opencv_samples_cpp.dir/all
+CMakeFiles/opencv_samples.dir/all: samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all
+CMakeFiles/opencv_samples.dir/all: samples/dnn/CMakeFiles/opencv_samples_dnn.dir/all
+CMakeFiles/opencv_samples.dir/all: samples/tapi/CMakeFiles/opencv_samples_tapi.dir/all
 CMakeFiles/opencv_samples.dir/all: modules/phase_unwrapping/CMakeFiles/opencv_samples_phase_unwrapping.dir/all
 CMakeFiles/opencv_samples.dir/all: modules/plot/CMakeFiles/opencv_samples_plot.dir/all
 CMakeFiles/opencv_samples.dir/all: modules/quality/CMakeFiles/opencv_samples_quality.dir/all
@@ -4325,10 +4351,6 @@ CMakeFiles/opencv_samples.dir/all: modules/face/CMakeFiles/opencv_samples_face.d
 CMakeFiles/opencv_samples.dir/all: modules/optflow/CMakeFiles/opencv_samples_optflow.dir/all
 CMakeFiles/opencv_samples.dir/all: modules/tracking/CMakeFiles/opencv_samples_tracking.dir/all
 CMakeFiles/opencv_samples.dir/all: modules/stereo/CMakeFiles/opencv_samples_stereo.dir/all
-CMakeFiles/opencv_samples.dir/all: samples/cpp/CMakeFiles/opencv_samples_cpp.dir/all
-CMakeFiles/opencv_samples.dir/all: samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all
-CMakeFiles/opencv_samples.dir/all: samples/dnn/CMakeFiles/opencv_samples_dnn.dir/all
-CMakeFiles/opencv_samples.dir/all: samples/tapi/CMakeFiles/opencv_samples_tapi.dir/all
 	$(MAKE) -f CMakeFiles/opencv_samples.dir/build.make CMakeFiles/opencv_samples.dir/depend
 	$(MAKE) -f CMakeFiles/opencv_samples.dir/build.make CMakeFiles/opencv_samples.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles --progress-num= "Built target opencv_samples"
@@ -6152,6 +6174,34 @@ opencv_dnn: modules/dnn/CMakeFiles/opencv_dnn.dir/rule
 modules/dnn/CMakeFiles/opencv_dnn.dir/clean:
 	$(MAKE) -f modules/dnn/CMakeFiles/opencv_dnn.dir/build.make modules/dnn/CMakeFiles/opencv_dnn.dir/clean
 .PHONY : modules/dnn/CMakeFiles/opencv_dnn.dir/clean
+
+#=============================================================================
+# Target rules for target modules/freetype/CMakeFiles/opencv_freetype.dir
+
+# All Build rule for target.
+modules/freetype/CMakeFiles/opencv_freetype.dir/all: modules/core/CMakeFiles/opencv_core.dir/all
+modules/freetype/CMakeFiles/opencv_freetype.dir/all: modules/imgproc/CMakeFiles/opencv_imgproc.dir/all
+	$(MAKE) -f modules/freetype/CMakeFiles/opencv_freetype.dir/build.make modules/freetype/CMakeFiles/opencv_freetype.dir/depend
+	$(MAKE) -f modules/freetype/CMakeFiles/opencv_freetype.dir/build.make modules/freetype/CMakeFiles/opencv_freetype.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles --progress-num= "Built target opencv_freetype"
+.PHONY : modules/freetype/CMakeFiles/opencv_freetype.dir/all
+
+# Build rule for subdir invocation for target.
+modules/freetype/CMakeFiles/opencv_freetype.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles 7
+	$(MAKE) -f CMakeFiles/Makefile2 modules/freetype/CMakeFiles/opencv_freetype.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles 0
+.PHONY : modules/freetype/CMakeFiles/opencv_freetype.dir/rule
+
+# Convenience name for target.
+opencv_freetype: modules/freetype/CMakeFiles/opencv_freetype.dir/rule
+
+.PHONY : opencv_freetype
+
+# clean rule for target.
+modules/freetype/CMakeFiles/opencv_freetype.dir/clean:
+	$(MAKE) -f modules/freetype/CMakeFiles/opencv_freetype.dir/build.make modules/freetype/CMakeFiles/opencv_freetype.dir/clean
+.PHONY : modules/freetype/CMakeFiles/opencv_freetype.dir/clean
 
 #=============================================================================
 # Target rules for target modules/fuzzy/CMakeFiles/opencv_fuzzy.dir
@@ -15572,6 +15622,7 @@ samples/cpp/CMakeFiles/example_tutorial_pnp_registration.dir/all: modules/reg/CM
 samples/cpp/CMakeFiles/example_tutorial_pnp_registration.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_pnp_registration.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_pnp_registration.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_pnp_registration.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_pnp_registration.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_pnp_registration.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_pnp_registration.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -15644,6 +15695,7 @@ samples/cpp/CMakeFiles/example_cpp_watershed.dir/all: modules/reg/CMakeFiles/ope
 samples/cpp/CMakeFiles/example_cpp_watershed.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_watershed.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_watershed.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_watershed.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_watershed.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_watershed.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_watershed.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -15716,6 +15768,7 @@ samples/cpp/CMakeFiles/example_tutorial_pnp_detection.dir/all: modules/reg/CMake
 samples/cpp/CMakeFiles/example_tutorial_pnp_detection.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_pnp_detection.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_pnp_detection.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_pnp_detection.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_pnp_detection.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_pnp_detection.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_pnp_detection.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -15788,6 +15841,7 @@ samples/cpp/CMakeFiles/example_cpp_warpPerspective_demo.dir/all: modules/reg/CMa
 samples/cpp/CMakeFiles/example_cpp_warpPerspective_demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_warpPerspective_demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_warpPerspective_demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_warpPerspective_demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_warpPerspective_demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_warpPerspective_demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_warpPerspective_demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -15860,6 +15914,7 @@ samples/cpp/CMakeFiles/example_cpp_videowriter_basic.dir/all: modules/reg/CMakeF
 samples/cpp/CMakeFiles/example_cpp_videowriter_basic.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_videowriter_basic.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_videowriter_basic.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_videowriter_basic.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_videowriter_basic.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_videowriter_basic.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_videowriter_basic.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -15932,6 +15987,7 @@ samples/cpp/CMakeFiles/example_cpp_videocapture_openni.dir/all: modules/reg/CMak
 samples/cpp/CMakeFiles/example_cpp_videocapture_openni.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_openni.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_openni.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_videocapture_openni.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_openni.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_openni.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_openni.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -16004,6 +16060,7 @@ samples/cpp/CMakeFiles/example_cpp_videocapture_intelperc.dir/all: modules/reg/C
 samples/cpp/CMakeFiles/example_cpp_videocapture_intelperc.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_intelperc.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_intelperc.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_videocapture_intelperc.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_intelperc.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_intelperc.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_intelperc.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -16076,6 +16133,7 @@ samples/cpp/CMakeFiles/example_cpp_videocapture_image_sequence.dir/all: modules/
 samples/cpp/CMakeFiles/example_cpp_videocapture_image_sequence.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_image_sequence.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_image_sequence.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_videocapture_image_sequence.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_image_sequence.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_image_sequence.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_image_sequence.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -16148,6 +16206,7 @@ samples/cpp/CMakeFiles/example_cpp_videocapture_gphoto2_autofocus.dir/all: modul
 samples/cpp/CMakeFiles/example_cpp_videocapture_gphoto2_autofocus.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_gphoto2_autofocus.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_gphoto2_autofocus.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_videocapture_gphoto2_autofocus.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_gphoto2_autofocus.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_gphoto2_autofocus.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_gphoto2_autofocus.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -16220,6 +16279,7 @@ samples/cpp/CMakeFiles/example_cpp_videocapture_camera.dir/all: modules/reg/CMak
 samples/cpp/CMakeFiles/example_cpp_videocapture_camera.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_camera.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_camera.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_videocapture_camera.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_camera.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_camera.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_camera.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -16292,6 +16352,7 @@ samples/cpp/CMakeFiles/example_cpp_videocapture_basic.dir/all: modules/reg/CMake
 samples/cpp/CMakeFiles/example_cpp_videocapture_basic.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_basic.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_basic.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_videocapture_basic.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_basic.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_basic.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_basic.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -16364,6 +16425,7 @@ samples/cpp/CMakeFiles/example_tutorial_video-write.dir/all: modules/reg/CMakeFi
 samples/cpp/CMakeFiles/example_tutorial_video-write.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_video-write.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_video-write.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_video-write.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_video-write.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_video-write.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_video-write.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -16436,6 +16498,7 @@ samples/cpp/CMakeFiles/example_tutorial_bg_sub.dir/all: modules/reg/CMakeFiles/o
 samples/cpp/CMakeFiles/example_tutorial_bg_sub.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_bg_sub.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_bg_sub.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_bg_sub.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_bg_sub.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_bg_sub.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_bg_sub.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -16508,6 +16571,7 @@ samples/cpp/CMakeFiles/example_tutorial_imgproc_applyColorMap.dir/all: modules/r
 samples/cpp/CMakeFiles/example_tutorial_imgproc_applyColorMap.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_applyColorMap.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_applyColorMap.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_imgproc_applyColorMap.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_applyColorMap.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_applyColorMap.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_applyColorMap.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -16580,6 +16644,7 @@ samples/cpp/CMakeFiles/example_tutorial_imgproc_HoughLinesCircles.dir/all: modul
 samples/cpp/CMakeFiles/example_tutorial_imgproc_HoughLinesCircles.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_HoughLinesCircles.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_HoughLinesCircles.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_imgproc_HoughLinesCircles.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_HoughLinesCircles.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_HoughLinesCircles.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_HoughLinesCircles.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -16652,6 +16717,7 @@ samples/cpp/CMakeFiles/example_tutorial_core_merge.dir/all: modules/reg/CMakeFil
 samples/cpp/CMakeFiles/example_tutorial_core_merge.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_core_merge.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_core_merge.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_core_merge.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_core_merge.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_core_merge.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_core_merge.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -16724,6 +16790,7 @@ samples/cpp/CMakeFiles/example_tutorial_core_mat_checkVector.dir/all: modules/re
 samples/cpp/CMakeFiles/example_tutorial_core_mat_checkVector.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_core_mat_checkVector.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_core_mat_checkVector.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_core_mat_checkVector.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_core_mat_checkVector.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_core_mat_checkVector.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_core_mat_checkVector.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -16796,6 +16863,7 @@ samples/cpp/CMakeFiles/example_tutorial_cloning_gui.dir/all: modules/reg/CMakeFi
 samples/cpp/CMakeFiles/example_tutorial_cloning_gui.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_cloning_gui.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_cloning_gui.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_cloning_gui.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_cloning_gui.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_cloning_gui.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_cloning_gui.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -16868,6 +16936,7 @@ samples/cpp/CMakeFiles/example_tutorial_npr_demo.dir/all: modules/reg/CMakeFiles
 samples/cpp/CMakeFiles/example_tutorial_npr_demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_npr_demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_npr_demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_npr_demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_npr_demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_npr_demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_npr_demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -16940,6 +17009,7 @@ samples/cpp/CMakeFiles/example_tutorial_objectDetection.dir/all: modules/reg/CMa
 samples/cpp/CMakeFiles/example_tutorial_objectDetection.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_objectDetection.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_objectDetection.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_objectDetection.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_objectDetection.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_objectDetection.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_objectDetection.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -17012,6 +17082,7 @@ samples/cpp/CMakeFiles/example_tutorial_introduction_to_pca.dir/all: modules/reg
 samples/cpp/CMakeFiles/example_tutorial_introduction_to_pca.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_introduction_to_pca.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_introduction_to_pca.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_introduction_to_pca.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_introduction_to_pca.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_introduction_to_pca.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_introduction_to_pca.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -17084,6 +17155,7 @@ samples/cpp/CMakeFiles/example_tutorial_introduction_windows_vs.dir/all: modules
 samples/cpp/CMakeFiles/example_tutorial_introduction_windows_vs.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_introduction_windows_vs.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_introduction_windows_vs.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_introduction_windows_vs.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_introduction_windows_vs.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_introduction_windows_vs.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_introduction_windows_vs.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -17156,6 +17228,7 @@ samples/cpp/CMakeFiles/example_tutorial_documentation.dir/all: modules/reg/CMake
 samples/cpp/CMakeFiles/example_tutorial_documentation.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_documentation.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_documentation.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_documentation.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_documentation.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_documentation.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_documentation.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -17228,6 +17301,7 @@ samples/cpp/CMakeFiles/example_tutorial_display_image.dir/all: modules/reg/CMake
 samples/cpp/CMakeFiles/example_tutorial_display_image.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_display_image.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_display_image.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_display_image.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_display_image.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_display_image.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_display_image.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -17300,6 +17374,7 @@ samples/cpp/CMakeFiles/example_tutorial_imgproc_HoughLinesPointSet.dir/all: modu
 samples/cpp/CMakeFiles/example_tutorial_imgproc_HoughLinesPointSet.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_HoughLinesPointSet.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_HoughLinesPointSet.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_imgproc_HoughLinesPointSet.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_HoughLinesPointSet.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_HoughLinesPointSet.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_HoughLinesPointSet.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -17372,6 +17447,7 @@ samples/cpp/CMakeFiles/example_tutorial_SURF_FLANN_matching_homography_Demo.dir/
 samples/cpp/CMakeFiles/example_tutorial_SURF_FLANN_matching_homography_Demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_SURF_FLANN_matching_homography_Demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_SURF_FLANN_matching_homography_Demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_SURF_FLANN_matching_homography_Demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_SURF_FLANN_matching_homography_Demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_SURF_FLANN_matching_homography_Demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_SURF_FLANN_matching_homography_Demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -17444,6 +17520,7 @@ samples/cpp/CMakeFiles/example_tutorial_SURF_FLANN_matching_Demo.dir/all: module
 samples/cpp/CMakeFiles/example_tutorial_SURF_FLANN_matching_Demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_SURF_FLANN_matching_Demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_SURF_FLANN_matching_Demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_SURF_FLANN_matching_Demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_SURF_FLANN_matching_Demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_SURF_FLANN_matching_Demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_SURF_FLANN_matching_Demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -17516,6 +17593,7 @@ samples/cpp/CMakeFiles/example_tutorial_SURF_detection_Demo.dir/all: modules/reg
 samples/cpp/CMakeFiles/example_tutorial_SURF_detection_Demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_SURF_detection_Demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_SURF_detection_Demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_SURF_detection_Demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_SURF_detection_Demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_SURF_detection_Demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_SURF_detection_Demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -17588,6 +17666,7 @@ samples/cpp/CMakeFiles/example_tutorial_pose_from_homography.dir/all: modules/re
 samples/cpp/CMakeFiles/example_tutorial_pose_from_homography.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_pose_from_homography.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_pose_from_homography.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_pose_from_homography.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_pose_from_homography.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_pose_from_homography.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_pose_from_homography.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -17660,6 +17739,7 @@ samples/cpp/CMakeFiles/example_tutorial_perspective_correction.dir/all: modules/
 samples/cpp/CMakeFiles/example_tutorial_perspective_correction.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_perspective_correction.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_perspective_correction.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_perspective_correction.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_perspective_correction.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_perspective_correction.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_perspective_correction.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -17732,6 +17812,7 @@ samples/cpp/CMakeFiles/example_tutorial_imgproc_drawContours.dir/all: modules/re
 samples/cpp/CMakeFiles/example_tutorial_imgproc_drawContours.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_drawContours.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_drawContours.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_imgproc_drawContours.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_drawContours.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_drawContours.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_drawContours.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -17804,6 +17885,7 @@ samples/cpp/CMakeFiles/example_tutorial_cloning_demo.dir/all: modules/reg/CMakeF
 samples/cpp/CMakeFiles/example_tutorial_cloning_demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_cloning_demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_cloning_demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_cloning_demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_cloning_demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_cloning_demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_cloning_demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -17876,6 +17958,7 @@ samples/cpp/CMakeFiles/example_cpp_segment_objects.dir/all: modules/reg/CMakeFil
 samples/cpp/CMakeFiles/example_cpp_segment_objects.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_segment_objects.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_segment_objects.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_segment_objects.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_segment_objects.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_segment_objects.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_segment_objects.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -17948,6 +18031,7 @@ samples/cpp/CMakeFiles/example_cpp_squares.dir/all: modules/reg/CMakeFiles/openc
 samples/cpp/CMakeFiles/example_cpp_squares.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_squares.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_squares.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_squares.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_squares.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_squares.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_squares.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -18020,6 +18104,7 @@ samples/cpp/CMakeFiles/example_tutorial_decompose_homography.dir/all: modules/re
 samples/cpp/CMakeFiles/example_tutorial_decompose_homography.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_decompose_homography.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_decompose_homography.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_decompose_homography.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_decompose_homography.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_decompose_homography.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_decompose_homography.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -18092,6 +18177,7 @@ samples/cpp/CMakeFiles/example_cpp_phase_corr.dir/all: modules/reg/CMakeFiles/op
 samples/cpp/CMakeFiles/example_cpp_phase_corr.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_phase_corr.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_phase_corr.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_phase_corr.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_phase_corr.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_phase_corr.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_phase_corr.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -18164,6 +18250,7 @@ samples/cpp/CMakeFiles/example_cpp_pca.dir/all: modules/reg/CMakeFiles/opencv_re
 samples/cpp/CMakeFiles/example_cpp_pca.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_pca.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_pca.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_pca.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_pca.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_pca.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_pca.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -18236,6 +18323,7 @@ samples/cpp/CMakeFiles/example_cpp_peopledetect.dir/all: modules/reg/CMakeFiles/
 samples/cpp/CMakeFiles/example_cpp_peopledetect.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_peopledetect.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_peopledetect.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_peopledetect.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_peopledetect.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_peopledetect.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_peopledetect.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -18308,6 +18396,7 @@ samples/cpp/CMakeFiles/example_cpp_calibration.dir/all: modules/reg/CMakeFiles/o
 samples/cpp/CMakeFiles/example_cpp_calibration.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_calibration.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_calibration.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_calibration.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_calibration.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_calibration.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_calibration.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -18380,6 +18469,7 @@ samples/cpp/CMakeFiles/example_tutorial_changing_contrast_brightness_image.dir/a
 samples/cpp/CMakeFiles/example_tutorial_changing_contrast_brightness_image.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_changing_contrast_brightness_image.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_changing_contrast_brightness_image.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_changing_contrast_brightness_image.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_changing_contrast_brightness_image.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_changing_contrast_brightness_image.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_changing_contrast_brightness_image.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -18452,6 +18542,7 @@ samples/cpp/CMakeFiles/example_cpp_lkdemo.dir/all: modules/reg/CMakeFiles/opencv
 samples/cpp/CMakeFiles/example_cpp_lkdemo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_lkdemo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_lkdemo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_lkdemo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_lkdemo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_lkdemo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_lkdemo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -18524,6 +18615,7 @@ samples/cpp/CMakeFiles/example_cpp_videocapture_gstreamer_pipeline.dir/all: modu
 samples/cpp/CMakeFiles/example_cpp_videocapture_gstreamer_pipeline.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_gstreamer_pipeline.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_gstreamer_pipeline.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_videocapture_gstreamer_pipeline.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_gstreamer_pipeline.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_gstreamer_pipeline.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_gstreamer_pipeline.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -18596,6 +18688,7 @@ samples/cpp/CMakeFiles/example_cpp_train_HOG.dir/all: modules/reg/CMakeFiles/ope
 samples/cpp/CMakeFiles/example_cpp_train_HOG.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_train_HOG.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_train_HOG.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_train_HOG.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_train_HOG.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_train_HOG.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_train_HOG.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -18668,6 +18761,7 @@ samples/cpp/CMakeFiles/example_tutorial_Morphology_1.dir/all: modules/reg/CMakeF
 samples/cpp/CMakeFiles/example_tutorial_Morphology_1.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Morphology_1.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Morphology_1.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_Morphology_1.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Morphology_1.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Morphology_1.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Morphology_1.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -18740,6 +18834,7 @@ samples/cpp/CMakeFiles/example_cpp_kmeans.dir/all: modules/reg/CMakeFiles/opencv
 samples/cpp/CMakeFiles/example_cpp_kmeans.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_kmeans.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_kmeans.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_kmeans.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_kmeans.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_kmeans.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_kmeans.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -18812,6 +18907,7 @@ samples/cpp/CMakeFiles/example_tutorial_hdr_imaging.dir/all: modules/reg/CMakeFi
 samples/cpp/CMakeFiles/example_tutorial_hdr_imaging.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_hdr_imaging.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_hdr_imaging.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_hdr_imaging.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_hdr_imaging.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_hdr_imaging.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_hdr_imaging.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -18884,6 +18980,7 @@ samples/cpp/CMakeFiles/example_cpp_kalman.dir/all: modules/reg/CMakeFiles/opencv
 samples/cpp/CMakeFiles/example_cpp_kalman.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_kalman.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_kalman.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_kalman.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_kalman.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_kalman.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_kalman.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -18956,6 +19053,7 @@ samples/cpp/CMakeFiles/example_tutorial_EqualizeHist_Demo.dir/all: modules/reg/C
 samples/cpp/CMakeFiles/example_tutorial_EqualizeHist_Demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_EqualizeHist_Demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_EqualizeHist_Demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_EqualizeHist_Demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_EqualizeHist_Demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_EqualizeHist_Demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_EqualizeHist_Demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -19028,6 +19126,7 @@ samples/cpp/CMakeFiles/example_tutorial_goodFeaturesToTrack_Demo.dir/all: module
 samples/cpp/CMakeFiles/example_tutorial_goodFeaturesToTrack_Demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_goodFeaturesToTrack_Demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_goodFeaturesToTrack_Demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_goodFeaturesToTrack_Demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_goodFeaturesToTrack_Demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_goodFeaturesToTrack_Demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_goodFeaturesToTrack_Demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -19100,6 +19199,7 @@ samples/cpp/CMakeFiles/example_cpp_polar_transforms.dir/all: modules/reg/CMakeFi
 samples/cpp/CMakeFiles/example_cpp_polar_transforms.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_polar_transforms.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_polar_transforms.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_polar_transforms.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_polar_transforms.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_polar_transforms.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_polar_transforms.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -19172,6 +19272,7 @@ samples/cpp/CMakeFiles/example_cpp_fitellipse.dir/all: modules/reg/CMakeFiles/op
 samples/cpp/CMakeFiles/example_cpp_fitellipse.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_fitellipse.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_fitellipse.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_fitellipse.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_fitellipse.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_fitellipse.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_fitellipse.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -19244,6 +19345,7 @@ samples/cpp/CMakeFiles/example_tutorial_AKAZE_match.dir/all: modules/reg/CMakeFi
 samples/cpp/CMakeFiles/example_tutorial_AKAZE_match.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_AKAZE_match.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_AKAZE_match.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_AKAZE_match.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_AKAZE_match.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_AKAZE_match.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_AKAZE_match.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -19316,6 +19418,7 @@ samples/cpp/CMakeFiles/example_tutorial_core_split.dir/all: modules/reg/CMakeFil
 samples/cpp/CMakeFiles/example_tutorial_core_split.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_core_split.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_core_split.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_core_split.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_core_split.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_core_split.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_core_split.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -19388,6 +19491,7 @@ samples/cpp/CMakeFiles/example_tutorial_decolor.dir/all: modules/reg/CMakeFiles/
 samples/cpp/CMakeFiles/example_tutorial_decolor.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_decolor.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_decolor.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_decolor.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_decolor.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_decolor.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_decolor.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -19460,6 +19564,7 @@ samples/cpp/CMakeFiles/example_cpp_filestorage.dir/all: modules/reg/CMakeFiles/o
 samples/cpp/CMakeFiles/example_cpp_filestorage.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_filestorage.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_filestorage.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_filestorage.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_filestorage.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_filestorage.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_filestorage.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -19532,6 +19637,7 @@ samples/cpp/CMakeFiles/example_tutorial_Laplace_Demo.dir/all: modules/reg/CMakeF
 samples/cpp/CMakeFiles/example_tutorial_Laplace_Demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Laplace_Demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Laplace_Demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_Laplace_Demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Laplace_Demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Laplace_Demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Laplace_Demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -19604,6 +19710,7 @@ samples/cpp/CMakeFiles/example_tutorial_HoughLines_Demo.dir/all: modules/reg/CMa
 samples/cpp/CMakeFiles/example_tutorial_HoughLines_Demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_HoughLines_Demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_HoughLines_Demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_HoughLines_Demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_HoughLines_Demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_HoughLines_Demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_HoughLines_Demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -19676,6 +19783,7 @@ samples/cpp/CMakeFiles/example_cpp_fback.dir/all: modules/reg/CMakeFiles/opencv_
 samples/cpp/CMakeFiles/example_cpp_fback.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_fback.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_fback.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_fback.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_fback.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_fback.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_fback.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -19748,6 +19856,7 @@ samples/cpp/CMakeFiles/example_tutorial_video-input-psnr-ssim.dir/all: modules/r
 samples/cpp/CMakeFiles/example_tutorial_video-input-psnr-ssim.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_video-input-psnr-ssim.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_video-input-psnr-ssim.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_video-input-psnr-ssim.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_video-input-psnr-ssim.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_video-input-psnr-ssim.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_video-input-psnr-ssim.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -19820,6 +19929,7 @@ samples/cpp/CMakeFiles/example_tutorial_calcBackProject_Demo2.dir/all: modules/r
 samples/cpp/CMakeFiles/example_tutorial_calcBackProject_Demo2.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_calcBackProject_Demo2.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_calcBackProject_Demo2.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_calcBackProject_Demo2.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_calcBackProject_Demo2.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_calcBackProject_Demo2.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_calcBackProject_Demo2.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -19892,6 +20002,7 @@ samples/cpp/CMakeFiles/example_cpp_minarea.dir/all: modules/reg/CMakeFiles/openc
 samples/cpp/CMakeFiles/example_cpp_minarea.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_minarea.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_minarea.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_minarea.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_minarea.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_minarea.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_minarea.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -19964,6 +20075,7 @@ samples/cpp/CMakeFiles/example_tutorial_Threshold_inRange.dir/all: modules/reg/C
 samples/cpp/CMakeFiles/example_tutorial_Threshold_inRange.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Threshold_inRange.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Threshold_inRange.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_Threshold_inRange.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Threshold_inRange.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Threshold_inRange.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Threshold_inRange.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -20036,6 +20148,7 @@ samples/cpp/CMakeFiles/example_cpp_cloning_demo.dir/all: modules/reg/CMakeFiles/
 samples/cpp/CMakeFiles/example_cpp_cloning_demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_cloning_demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_cloning_demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_cloning_demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_cloning_demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_cloning_demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_cloning_demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -20108,6 +20221,7 @@ samples/cpp/CMakeFiles/example_cpp_train_svmsgd.dir/all: modules/reg/CMakeFiles/
 samples/cpp/CMakeFiles/example_cpp_train_svmsgd.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_train_svmsgd.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_train_svmsgd.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_train_svmsgd.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_train_svmsgd.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_train_svmsgd.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_train_svmsgd.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -20180,6 +20294,7 @@ samples/cpp/CMakeFiles/example_cpp_detect_blob.dir/all: modules/reg/CMakeFiles/o
 samples/cpp/CMakeFiles/example_cpp_detect_blob.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_detect_blob.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_detect_blob.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_detect_blob.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_detect_blob.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_detect_blob.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_detect_blob.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -20252,6 +20367,7 @@ samples/cpp/CMakeFiles/example_cpp_ela.dir/all: modules/reg/CMakeFiles/opencv_re
 samples/cpp/CMakeFiles/example_cpp_ela.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_ela.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_ela.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_ela.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_ela.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_ela.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_ela.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -20324,6 +20440,7 @@ samples/cpp/CMakeFiles/example_cpp_points_classifier.dir/all: modules/reg/CMakeF
 samples/cpp/CMakeFiles/example_cpp_points_classifier.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_points_classifier.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_points_classifier.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_points_classifier.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_points_classifier.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_points_classifier.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_points_classifier.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -20396,6 +20513,7 @@ samples/cpp/CMakeFiles/example_cpp_facial_features.dir/all: modules/reg/CMakeFil
 samples/cpp/CMakeFiles/example_cpp_facial_features.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_facial_features.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_facial_features.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_facial_features.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_facial_features.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_facial_features.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_facial_features.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -20468,6 +20586,7 @@ samples/cpp/CMakeFiles/example_cpp_dbt_face_detection.dir/all: modules/reg/CMake
 samples/cpp/CMakeFiles/example_cpp_dbt_face_detection.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_dbt_face_detection.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_dbt_face_detection.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_dbt_face_detection.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_dbt_face_detection.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_dbt_face_detection.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_dbt_face_detection.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -20540,6 +20659,7 @@ samples/cpp/CMakeFiles/example_cpp_convexhull.dir/all: modules/reg/CMakeFiles/op
 samples/cpp/CMakeFiles/example_cpp_convexhull.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_convexhull.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_convexhull.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_convexhull.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_convexhull.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_convexhull.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_convexhull.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -20612,6 +20732,7 @@ samples/cpp/CMakeFiles/example_cpp_travelsalesman.dir/all: modules/reg/CMakeFile
 samples/cpp/CMakeFiles/example_cpp_travelsalesman.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_travelsalesman.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_travelsalesman.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_travelsalesman.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_travelsalesman.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_travelsalesman.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_travelsalesman.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -20684,6 +20805,7 @@ samples/cpp/CMakeFiles/example_tutorial_HitMiss.dir/all: modules/reg/CMakeFiles/
 samples/cpp/CMakeFiles/example_tutorial_HitMiss.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_HitMiss.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_HitMiss.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_HitMiss.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_HitMiss.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_HitMiss.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_HitMiss.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -20756,6 +20878,7 @@ samples/cpp/CMakeFiles/example_cpp_logistic_regression.dir/all: modules/reg/CMak
 samples/cpp/CMakeFiles/example_cpp_logistic_regression.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_logistic_regression.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_logistic_regression.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_logistic_regression.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_logistic_regression.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_logistic_regression.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_logistic_regression.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -20828,6 +20951,7 @@ samples/cpp/CMakeFiles/example_cpp_3calibration.dir/all: modules/reg/CMakeFiles/
 samples/cpp/CMakeFiles/example_cpp_3calibration.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_3calibration.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_3calibration.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_3calibration.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_3calibration.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_3calibration.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_3calibration.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -20900,6 +21024,7 @@ samples/cpp/CMakeFiles/example_tutorial_planar_tracking.dir/all: modules/reg/CMa
 samples/cpp/CMakeFiles/example_tutorial_planar_tracking.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_planar_tracking.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_planar_tracking.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_planar_tracking.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_planar_tracking.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_planar_tracking.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_planar_tracking.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -20972,6 +21097,7 @@ samples/cpp/CMakeFiles/example_cpp_grabcut.dir/all: modules/reg/CMakeFiles/openc
 samples/cpp/CMakeFiles/example_cpp_grabcut.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_grabcut.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_grabcut.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_grabcut.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_grabcut.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_grabcut.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_grabcut.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -21044,6 +21170,7 @@ samples/cpp/CMakeFiles/example_cpp_morphology2.dir/all: modules/reg/CMakeFiles/o
 samples/cpp/CMakeFiles/example_cpp_morphology2.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_morphology2.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_morphology2.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_morphology2.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_morphology2.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_morphology2.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_morphology2.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -21116,6 +21243,7 @@ samples/cpp/CMakeFiles/example_cpp_camshiftdemo.dir/all: modules/reg/CMakeFiles/
 samples/cpp/CMakeFiles/example_cpp_camshiftdemo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_camshiftdemo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_camshiftdemo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_camshiftdemo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_camshiftdemo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_camshiftdemo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_camshiftdemo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -21188,6 +21316,7 @@ samples/cpp/CMakeFiles/example_tutorial_homography_from_camera_displacement.dir/
 samples/cpp/CMakeFiles/example_tutorial_homography_from_camera_displacement.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_homography_from_camera_displacement.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_homography_from_camera_displacement.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_homography_from_camera_displacement.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_homography_from_camera_displacement.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_homography_from_camera_displacement.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_homography_from_camera_displacement.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -21260,6 +21389,7 @@ samples/cpp/CMakeFiles/example_cpp_matchmethod_orb_akaze_brisk.dir/all: modules/
 samples/cpp/CMakeFiles/example_cpp_matchmethod_orb_akaze_brisk.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_matchmethod_orb_akaze_brisk.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_matchmethod_orb_akaze_brisk.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_matchmethod_orb_akaze_brisk.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_matchmethod_orb_akaze_brisk.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_matchmethod_orb_akaze_brisk.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_matchmethod_orb_akaze_brisk.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -21332,6 +21462,7 @@ samples/cpp/CMakeFiles/example_cpp_cloning_gui.dir/all: modules/reg/CMakeFiles/o
 samples/cpp/CMakeFiles/example_cpp_cloning_gui.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_cloning_gui.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_cloning_gui.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_cloning_gui.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_cloning_gui.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_cloning_gui.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_cloning_gui.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -21404,6 +21535,7 @@ samples/cpp/CMakeFiles/example_tutorial_Threshold.dir/all: modules/reg/CMakeFile
 samples/cpp/CMakeFiles/example_tutorial_Threshold.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Threshold.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Threshold.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_Threshold.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Threshold.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Threshold.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Threshold.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -21476,6 +21608,7 @@ samples/cpp/CMakeFiles/example_cpp_image_alignment.dir/all: modules/reg/CMakeFil
 samples/cpp/CMakeFiles/example_cpp_image_alignment.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_image_alignment.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_image_alignment.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_image_alignment.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_image_alignment.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_image_alignment.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_image_alignment.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -21548,6 +21681,7 @@ samples/cpp/CMakeFiles/example_tutorial_imgcodecs_imwrite.dir/all: modules/reg/C
 samples/cpp/CMakeFiles/example_tutorial_imgcodecs_imwrite.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgcodecs_imwrite.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgcodecs_imwrite.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_imgcodecs_imwrite.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgcodecs_imwrite.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgcodecs_imwrite.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgcodecs_imwrite.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -21620,6 +21754,7 @@ samples/cpp/CMakeFiles/example_cpp_application_trace.dir/all: modules/reg/CMakeF
 samples/cpp/CMakeFiles/example_cpp_application_trace.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_application_trace.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_application_trace.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_application_trace.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_application_trace.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_application_trace.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_application_trace.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -21692,6 +21827,7 @@ samples/cpp/CMakeFiles/example_tutorial_Morphology_2.dir/all: modules/reg/CMakeF
 samples/cpp/CMakeFiles/example_tutorial_Morphology_2.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Morphology_2.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Morphology_2.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_Morphology_2.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Morphology_2.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Morphology_2.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Morphology_2.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -21764,6 +21900,7 @@ samples/cpp/CMakeFiles/example_cpp_npr_demo.dir/all: modules/reg/CMakeFiles/open
 samples/cpp/CMakeFiles/example_cpp_npr_demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_npr_demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_npr_demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_npr_demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_npr_demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_npr_demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_npr_demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -21836,6 +21973,7 @@ samples/cpp/CMakeFiles/example_cpp_edge.dir/all: modules/reg/CMakeFiles/opencv_r
 samples/cpp/CMakeFiles/example_cpp_edge.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_edge.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_edge.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_edge.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_edge.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_edge.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_edge.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -21908,6 +22046,7 @@ samples/cpp/CMakeFiles/example_tutorial_MatchTemplate_Demo.dir/all: modules/reg/
 samples/cpp/CMakeFiles/example_tutorial_MatchTemplate_Demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_MatchTemplate_Demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_MatchTemplate_Demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_MatchTemplate_Demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_MatchTemplate_Demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_MatchTemplate_Demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_MatchTemplate_Demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -21968,15 +22107,6 @@ samples/cpp/CMakeFiles/example_tutorial_MatchTemplate_Demo.dir/clean:
 # Target rules for target samples/cpp/CMakeFiles/opencv_samples_cpp.dir
 
 # All Build rule for target.
-samples/cpp/CMakeFiles/opencv_samples_cpp.dir/all: samples/cpp/CMakeFiles/example_cpp_watershed.dir/all
-samples/cpp/CMakeFiles/opencv_samples_cpp.dir/all: samples/cpp/CMakeFiles/example_cpp_warpPerspective_demo.dir/all
-samples/cpp/CMakeFiles/opencv_samples_cpp.dir/all: samples/cpp/CMakeFiles/example_cpp_videowriter_basic.dir/all
-samples/cpp/CMakeFiles/opencv_samples_cpp.dir/all: samples/cpp/CMakeFiles/example_cpp_videocapture_openni.dir/all
-samples/cpp/CMakeFiles/opencv_samples_cpp.dir/all: samples/cpp/CMakeFiles/example_cpp_videocapture_intelperc.dir/all
-samples/cpp/CMakeFiles/opencv_samples_cpp.dir/all: samples/cpp/CMakeFiles/example_cpp_videocapture_image_sequence.dir/all
-samples/cpp/CMakeFiles/opencv_samples_cpp.dir/all: samples/cpp/CMakeFiles/example_cpp_videocapture_gphoto2_autofocus.dir/all
-samples/cpp/CMakeFiles/opencv_samples_cpp.dir/all: samples/cpp/CMakeFiles/example_cpp_videocapture_camera.dir/all
-samples/cpp/CMakeFiles/opencv_samples_cpp.dir/all: samples/cpp/CMakeFiles/example_cpp_videocapture_basic.dir/all
 samples/cpp/CMakeFiles/opencv_samples_cpp.dir/all: samples/cpp/CMakeFiles/example_cpp_segment_objects.dir/all
 samples/cpp/CMakeFiles/opencv_samples_cpp.dir/all: samples/cpp/CMakeFiles/example_cpp_squares.dir/all
 samples/cpp/CMakeFiles/opencv_samples_cpp.dir/all: samples/cpp/CMakeFiles/example_cpp_phase_corr.dir/all
@@ -22047,6 +22177,15 @@ samples/cpp/CMakeFiles/opencv_samples_cpp.dir/all: samples/cpp/CMakeFiles/exampl
 samples/cpp/CMakeFiles/opencv_samples_cpp.dir/all: samples/cpp/CMakeFiles/example_cpp_example.dir/all
 samples/cpp/CMakeFiles/opencv_samples_cpp.dir/all: samples/cpp/CMakeFiles/example_cpp_dft.dir/all
 samples/cpp/CMakeFiles/opencv_samples_cpp.dir/all: samples/cpp/CMakeFiles/example_cpp_qrcode.dir/all
+samples/cpp/CMakeFiles/opencv_samples_cpp.dir/all: samples/cpp/CMakeFiles/example_cpp_watershed.dir/all
+samples/cpp/CMakeFiles/opencv_samples_cpp.dir/all: samples/cpp/CMakeFiles/example_cpp_warpPerspective_demo.dir/all
+samples/cpp/CMakeFiles/opencv_samples_cpp.dir/all: samples/cpp/CMakeFiles/example_cpp_videowriter_basic.dir/all
+samples/cpp/CMakeFiles/opencv_samples_cpp.dir/all: samples/cpp/CMakeFiles/example_cpp_videocapture_openni.dir/all
+samples/cpp/CMakeFiles/opencv_samples_cpp.dir/all: samples/cpp/CMakeFiles/example_cpp_videocapture_intelperc.dir/all
+samples/cpp/CMakeFiles/opencv_samples_cpp.dir/all: samples/cpp/CMakeFiles/example_cpp_videocapture_image_sequence.dir/all
+samples/cpp/CMakeFiles/opencv_samples_cpp.dir/all: samples/cpp/CMakeFiles/example_cpp_videocapture_gphoto2_autofocus.dir/all
+samples/cpp/CMakeFiles/opencv_samples_cpp.dir/all: samples/cpp/CMakeFiles/example_cpp_videocapture_camera.dir/all
+samples/cpp/CMakeFiles/opencv_samples_cpp.dir/all: samples/cpp/CMakeFiles/example_cpp_videocapture_basic.dir/all
 	$(MAKE) -f samples/cpp/CMakeFiles/opencv_samples_cpp.dir/build.make samples/cpp/CMakeFiles/opencv_samples_cpp.dir/depend
 	$(MAKE) -f samples/cpp/CMakeFiles/opencv_samples_cpp.dir/build.make samples/cpp/CMakeFiles/opencv_samples_cpp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles --progress-num= "Built target opencv_samples_cpp"
@@ -22085,6 +22224,7 @@ samples/cpp/CMakeFiles/example_tutorial_HoughCircle_Demo.dir/all: modules/reg/CM
 samples/cpp/CMakeFiles/example_tutorial_HoughCircle_Demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_HoughCircle_Demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_HoughCircle_Demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_HoughCircle_Demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_HoughCircle_Demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_HoughCircle_Demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_HoughCircle_Demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -22157,6 +22297,7 @@ samples/cpp/CMakeFiles/example_tutorial_core_various.dir/all: modules/reg/CMakeF
 samples/cpp/CMakeFiles/example_tutorial_core_various.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_core_various.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_core_various.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_core_various.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_core_various.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_core_various.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_core_various.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -22229,6 +22370,7 @@ samples/cpp/CMakeFiles/example_cpp_mask_tmpl.dir/all: modules/reg/CMakeFiles/ope
 samples/cpp/CMakeFiles/example_cpp_mask_tmpl.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_mask_tmpl.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_mask_tmpl.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_mask_tmpl.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_mask_tmpl.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_mask_tmpl.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_mask_tmpl.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -22301,6 +22443,7 @@ samples/cpp/CMakeFiles/example_cpp_imagelist_creator.dir/all: modules/reg/CMakeF
 samples/cpp/CMakeFiles/example_cpp_imagelist_creator.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_imagelist_creator.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_imagelist_creator.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_imagelist_creator.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_imagelist_creator.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_imagelist_creator.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_imagelist_creator.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -22373,6 +22516,7 @@ samples/cpp/CMakeFiles/example_tutorial_BasicLinearTransforms.dir/all: modules/r
 samples/cpp/CMakeFiles/example_tutorial_BasicLinearTransforms.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_BasicLinearTransforms.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_BasicLinearTransforms.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_BasicLinearTransforms.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_BasicLinearTransforms.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_BasicLinearTransforms.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_BasicLinearTransforms.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -22445,6 +22589,7 @@ samples/cpp/CMakeFiles/example_tutorial_generalContours_demo1.dir/all: modules/r
 samples/cpp/CMakeFiles/example_tutorial_generalContours_demo1.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_generalContours_demo1.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_generalContours_demo1.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_generalContours_demo1.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_generalContours_demo1.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_generalContours_demo1.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_generalContours_demo1.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -22517,6 +22662,7 @@ samples/cpp/CMakeFiles/example_cpp_delaunay2.dir/all: modules/reg/CMakeFiles/ope
 samples/cpp/CMakeFiles/example_cpp_delaunay2.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_delaunay2.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_delaunay2.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_delaunay2.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_delaunay2.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_delaunay2.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_delaunay2.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -22589,6 +22735,7 @@ samples/cpp/CMakeFiles/example_cpp_select3dobj.dir/all: modules/reg/CMakeFiles/o
 samples/cpp/CMakeFiles/example_cpp_select3dobj.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_select3dobj.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_select3dobj.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_select3dobj.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_select3dobj.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_select3dobj.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_select3dobj.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -22661,6 +22808,7 @@ samples/cpp/CMakeFiles/example_tutorial_cornerHarris_Demo.dir/all: modules/reg/C
 samples/cpp/CMakeFiles/example_tutorial_cornerHarris_Demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_cornerHarris_Demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_cornerHarris_Demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_cornerHarris_Demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_cornerHarris_Demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_cornerHarris_Demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_cornerHarris_Demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -22733,6 +22881,7 @@ samples/cpp/CMakeFiles/example_cpp_inpaint.dir/all: modules/reg/CMakeFiles/openc
 samples/cpp/CMakeFiles/example_cpp_inpaint.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_inpaint.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_inpaint.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_inpaint.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_inpaint.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_inpaint.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_inpaint.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -22805,6 +22954,7 @@ samples/cpp/CMakeFiles/example_tutorial_core_reduce.dir/all: modules/reg/CMakeFi
 samples/cpp/CMakeFiles/example_tutorial_core_reduce.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_core_reduce.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_core_reduce.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_core_reduce.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_core_reduce.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_core_reduce.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_core_reduce.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -22877,6 +23027,7 @@ samples/cpp/CMakeFiles/example_cpp_ffilldemo.dir/all: modules/reg/CMakeFiles/ope
 samples/cpp/CMakeFiles/example_cpp_ffilldemo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_ffilldemo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_ffilldemo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_ffilldemo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_ffilldemo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_ffilldemo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_ffilldemo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -22949,6 +23100,7 @@ samples/cpp/CMakeFiles/example_cpp_detect_mser.dir/all: modules/reg/CMakeFiles/o
 samples/cpp/CMakeFiles/example_cpp_detect_mser.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_detect_mser.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_detect_mser.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_detect_mser.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_detect_mser.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_detect_mser.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_detect_mser.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -23021,6 +23173,7 @@ samples/cpp/CMakeFiles/example_tutorial_gdal-image.dir/all: modules/reg/CMakeFil
 samples/cpp/CMakeFiles/example_tutorial_gdal-image.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_gdal-image.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_gdal-image.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_gdal-image.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_gdal-image.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_gdal-image.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_gdal-image.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -23093,6 +23246,7 @@ samples/cpp/CMakeFiles/example_cpp_cout_mat.dir/all: modules/reg/CMakeFiles/open
 samples/cpp/CMakeFiles/example_cpp_cout_mat.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_cout_mat.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_cout_mat.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_cout_mat.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_cout_mat.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_cout_mat.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_cout_mat.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -23165,6 +23319,7 @@ samples/cpp/CMakeFiles/example_cpp_demhist.dir/all: modules/reg/CMakeFiles/openc
 samples/cpp/CMakeFiles/example_cpp_demhist.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_demhist.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_demhist.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_demhist.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_demhist.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_demhist.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_demhist.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -23237,6 +23392,7 @@ samples/cpp/CMakeFiles/example_cpp_videocapture_starter.dir/all: modules/reg/CMa
 samples/cpp/CMakeFiles/example_cpp_videocapture_starter.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_starter.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_starter.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_videocapture_starter.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_starter.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_starter.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_videocapture_starter.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -23309,6 +23465,7 @@ samples/cpp/CMakeFiles/example_tutorial_discrete_fourier_transform.dir/all: modu
 samples/cpp/CMakeFiles/example_tutorial_discrete_fourier_transform.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_discrete_fourier_transform.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_discrete_fourier_transform.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_discrete_fourier_transform.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_discrete_fourier_transform.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_discrete_fourier_transform.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_discrete_fourier_transform.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -23381,6 +23538,7 @@ samples/cpp/CMakeFiles/example_tutorial_anisotropic_image_segmentation.dir/all: 
 samples/cpp/CMakeFiles/example_tutorial_anisotropic_image_segmentation.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_anisotropic_image_segmentation.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_anisotropic_image_segmentation.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_anisotropic_image_segmentation.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_anisotropic_image_segmentation.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_anisotropic_image_segmentation.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_anisotropic_image_segmentation.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -23453,6 +23611,7 @@ samples/cpp/CMakeFiles/example_tutorial_Morphology_3.dir/all: modules/reg/CMakeF
 samples/cpp/CMakeFiles/example_tutorial_Morphology_3.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Morphology_3.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Morphology_3.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_Morphology_3.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Morphology_3.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Morphology_3.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Morphology_3.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -23525,6 +23684,7 @@ samples/cpp/CMakeFiles/example_cpp_distrans.dir/all: modules/reg/CMakeFiles/open
 samples/cpp/CMakeFiles/example_cpp_distrans.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_distrans.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_distrans.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_distrans.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_distrans.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_distrans.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_distrans.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -23597,6 +23757,7 @@ samples/cpp/CMakeFiles/example_tutorial_Remap_Demo.dir/all: modules/reg/CMakeFil
 samples/cpp/CMakeFiles/example_tutorial_Remap_Demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Remap_Demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Remap_Demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_Remap_Demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Remap_Demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Remap_Demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Remap_Demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -23669,6 +23830,7 @@ samples/cpp/CMakeFiles/example_cpp_falsecolor.dir/all: modules/reg/CMakeFiles/op
 samples/cpp/CMakeFiles/example_cpp_falsecolor.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_falsecolor.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_falsecolor.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_falsecolor.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_falsecolor.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_falsecolor.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_falsecolor.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -23741,6 +23903,7 @@ samples/cpp/CMakeFiles/example_cpp_contours2.dir/all: modules/reg/CMakeFiles/ope
 samples/cpp/CMakeFiles/example_cpp_contours2.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_contours2.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_contours2.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_contours2.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_contours2.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_contours2.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_contours2.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -23813,6 +23976,7 @@ samples/cpp/CMakeFiles/example_cpp_bgfg_segm.dir/all: modules/reg/CMakeFiles/ope
 samples/cpp/CMakeFiles/example_cpp_bgfg_segm.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_bgfg_segm.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_bgfg_segm.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_bgfg_segm.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_bgfg_segm.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_bgfg_segm.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_bgfg_segm.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -23885,6 +24049,7 @@ samples/cpp/CMakeFiles/example_cpp_drawing.dir/all: modules/reg/CMakeFiles/openc
 samples/cpp/CMakeFiles/example_cpp_drawing.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_drawing.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_drawing.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_drawing.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_drawing.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_drawing.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_drawing.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -23957,6 +24122,7 @@ samples/cpp/CMakeFiles/example_cpp_laplace.dir/all: modules/reg/CMakeFiles/openc
 samples/cpp/CMakeFiles/example_cpp_laplace.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_laplace.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_laplace.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_laplace.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_laplace.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_laplace.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_laplace.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -24029,6 +24195,7 @@ samples/cpp/CMakeFiles/example_cpp_em.dir/all: modules/reg/CMakeFiles/opencv_reg
 samples/cpp/CMakeFiles/example_cpp_em.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_em.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_em.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_em.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_em.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_em.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_em.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -24101,6 +24268,7 @@ samples/cpp/CMakeFiles/example_tutorial_imgproc_calcHist.dir/all: modules/reg/CM
 samples/cpp/CMakeFiles/example_tutorial_imgproc_calcHist.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_calcHist.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_calcHist.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_imgproc_calcHist.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_calcHist.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_calcHist.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_calcHist.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -24173,6 +24341,7 @@ samples/cpp/CMakeFiles/example_cpp_facedetect.dir/all: modules/reg/CMakeFiles/op
 samples/cpp/CMakeFiles/example_cpp_facedetect.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_facedetect.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_facedetect.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_facedetect.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_facedetect.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_facedetect.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_facedetect.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -24245,6 +24414,7 @@ samples/cpp/CMakeFiles/example_cpp_smiledetect.dir/all: modules/reg/CMakeFiles/o
 samples/cpp/CMakeFiles/example_cpp_smiledetect.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_smiledetect.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_smiledetect.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_smiledetect.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_smiledetect.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_smiledetect.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_smiledetect.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -24317,6 +24487,7 @@ samples/cpp/CMakeFiles/example_cpp_stereo_calib.dir/all: modules/reg/CMakeFiles/
 samples/cpp/CMakeFiles/example_cpp_stereo_calib.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_stereo_calib.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_stereo_calib.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_stereo_calib.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_stereo_calib.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_stereo_calib.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_stereo_calib.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -24389,6 +24560,7 @@ samples/cpp/CMakeFiles/example_cpp_neural_network.dir/all: modules/reg/CMakeFile
 samples/cpp/CMakeFiles/example_cpp_neural_network.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_neural_network.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_neural_network.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_neural_network.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_neural_network.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_neural_network.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_neural_network.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -24461,6 +24633,7 @@ samples/cpp/CMakeFiles/example_cpp_stereo_match.dir/all: modules/reg/CMakeFiles/
 samples/cpp/CMakeFiles/example_cpp_stereo_match.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_stereo_match.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_stereo_match.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_stereo_match.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_stereo_match.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_stereo_match.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_stereo_match.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -24533,6 +24706,7 @@ samples/cpp/CMakeFiles/example_tutorial_motion_deblur_filter.dir/all: modules/re
 samples/cpp/CMakeFiles/example_tutorial_motion_deblur_filter.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_motion_deblur_filter.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_motion_deblur_filter.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_motion_deblur_filter.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_motion_deblur_filter.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_motion_deblur_filter.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_motion_deblur_filter.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -24605,6 +24779,7 @@ samples/cpp/CMakeFiles/example_tutorial_SURF_matching_Demo.dir/all: modules/reg/
 samples/cpp/CMakeFiles/example_tutorial_SURF_matching_Demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_SURF_matching_Demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_SURF_matching_Demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_SURF_matching_Demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_SURF_matching_Demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_SURF_matching_Demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_SURF_matching_Demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -24677,6 +24852,7 @@ samples/cpp/CMakeFiles/example_cpp_stitching.dir/all: modules/reg/CMakeFiles/ope
 samples/cpp/CMakeFiles/example_cpp_stitching.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_stitching.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_stitching.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_stitching.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_stitching.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_stitching.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_stitching.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -24749,6 +24925,7 @@ samples/cpp/CMakeFiles/example_cpp_opencv_version.dir/all: modules/reg/CMakeFile
 samples/cpp/CMakeFiles/example_cpp_opencv_version.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_opencv_version.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_opencv_version.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_opencv_version.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_opencv_version.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_opencv_version.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_opencv_version.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -24821,6 +24998,7 @@ samples/cpp/CMakeFiles/example_tutorial_BasicLinearTransformsTrackbar.dir/all: m
 samples/cpp/CMakeFiles/example_tutorial_BasicLinearTransformsTrackbar.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_BasicLinearTransformsTrackbar.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_BasicLinearTransformsTrackbar.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_BasicLinearTransformsTrackbar.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_BasicLinearTransformsTrackbar.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_BasicLinearTransformsTrackbar.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_BasicLinearTransformsTrackbar.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -24893,6 +25071,7 @@ samples/cpp/CMakeFiles/example_tutorial_how_to_scan_images.dir/all: modules/reg/
 samples/cpp/CMakeFiles/example_tutorial_how_to_scan_images.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_how_to_scan_images.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_how_to_scan_images.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_how_to_scan_images.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_how_to_scan_images.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_how_to_scan_images.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_how_to_scan_images.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -24965,6 +25144,7 @@ samples/cpp/CMakeFiles/example_tutorial_porting_anisotropic_image_segmentation_g
 samples/cpp/CMakeFiles/example_tutorial_porting_anisotropic_image_segmentation_gapi_fluid.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_porting_anisotropic_image_segmentation_gapi_fluid.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_porting_anisotropic_image_segmentation_gapi_fluid.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_porting_anisotropic_image_segmentation_gapi_fluid.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_porting_anisotropic_image_segmentation_gapi_fluid.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_porting_anisotropic_image_segmentation_gapi_fluid.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_porting_anisotropic_image_segmentation_gapi_fluid.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -25037,6 +25217,7 @@ samples/cpp/CMakeFiles/example_tutorial_panorama_stitching_rotating_camera.dir/a
 samples/cpp/CMakeFiles/example_tutorial_panorama_stitching_rotating_camera.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_panorama_stitching_rotating_camera.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_panorama_stitching_rotating_camera.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_panorama_stitching_rotating_camera.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_panorama_stitching_rotating_camera.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_panorama_stitching_rotating_camera.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_panorama_stitching_rotating_camera.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -25109,6 +25290,7 @@ samples/cpp/CMakeFiles/example_cpp_stitching_detailed.dir/all: modules/reg/CMake
 samples/cpp/CMakeFiles/example_cpp_stitching_detailed.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_stitching_detailed.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_stitching_detailed.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_stitching_detailed.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_stitching_detailed.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_stitching_detailed.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_stitching_detailed.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -25181,6 +25363,7 @@ samples/cpp/CMakeFiles/example_cpp_tree_engine.dir/all: modules/reg/CMakeFiles/o
 samples/cpp/CMakeFiles/example_cpp_tree_engine.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_tree_engine.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_tree_engine.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_tree_engine.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_tree_engine.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_tree_engine.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_tree_engine.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -25253,6 +25436,7 @@ samples/cpp/CMakeFiles/example_tutorial_LATCH_match.dir/all: modules/reg/CMakeFi
 samples/cpp/CMakeFiles/example_tutorial_LATCH_match.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_LATCH_match.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_LATCH_match.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_LATCH_match.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_LATCH_match.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_LATCH_match.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_LATCH_match.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -25325,6 +25509,7 @@ samples/cpp/CMakeFiles/example_tutorial_calcBackProject_Demo1.dir/all: modules/r
 samples/cpp/CMakeFiles/example_tutorial_calcBackProject_Demo1.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_calcBackProject_Demo1.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_calcBackProject_Demo1.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_calcBackProject_Demo1.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_calcBackProject_Demo1.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_calcBackProject_Demo1.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_calcBackProject_Demo1.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -25397,6 +25582,7 @@ samples/cpp/CMakeFiles/example_cpp_connected_components.dir/all: modules/reg/CMa
 samples/cpp/CMakeFiles/example_cpp_connected_components.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_connected_components.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_connected_components.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_connected_components.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_connected_components.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_connected_components.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_connected_components.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -25469,6 +25655,7 @@ samples/cpp/CMakeFiles/example_tutorial_calcHist_Demo.dir/all: modules/reg/CMake
 samples/cpp/CMakeFiles/example_tutorial_calcHist_Demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_calcHist_Demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_calcHist_Demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_calcHist_Demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_calcHist_Demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_calcHist_Demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_calcHist_Demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -25541,6 +25728,7 @@ samples/cpp/CMakeFiles/example_tutorial_compareHist_Demo.dir/all: modules/reg/CM
 samples/cpp/CMakeFiles/example_tutorial_compareHist_Demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_compareHist_Demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_compareHist_Demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_compareHist_Demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_compareHist_Demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_compareHist_Demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_compareHist_Demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -25613,6 +25801,7 @@ samples/cpp/CMakeFiles/example_tutorial_Pyramids.dir/all: modules/reg/CMakeFiles
 samples/cpp/CMakeFiles/example_tutorial_Pyramids.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Pyramids.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Pyramids.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_Pyramids.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Pyramids.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Pyramids.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Pyramids.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -25685,6 +25874,7 @@ samples/cpp/CMakeFiles/example_tutorial_imgproc_HoughLinesP.dir/all: modules/reg
 samples/cpp/CMakeFiles/example_tutorial_imgproc_HoughLinesP.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_HoughLinesP.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_HoughLinesP.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_imgproc_HoughLinesP.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_HoughLinesP.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_HoughLinesP.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imgproc_HoughLinesP.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -25757,6 +25947,7 @@ samples/cpp/CMakeFiles/example_tutorial_Drawing_2.dir/all: modules/reg/CMakeFile
 samples/cpp/CMakeFiles/example_tutorial_Drawing_2.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Drawing_2.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Drawing_2.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_Drawing_2.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Drawing_2.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Drawing_2.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Drawing_2.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -25829,6 +26020,7 @@ samples/cpp/CMakeFiles/example_tutorial_non_linear_svms.dir/all: modules/reg/CMa
 samples/cpp/CMakeFiles/example_tutorial_non_linear_svms.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_non_linear_svms.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_non_linear_svms.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_non_linear_svms.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_non_linear_svms.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_non_linear_svms.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_non_linear_svms.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -25901,6 +26093,7 @@ samples/cpp/CMakeFiles/example_cpp_letter_recog.dir/all: modules/reg/CMakeFiles/
 samples/cpp/CMakeFiles/example_cpp_letter_recog.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_letter_recog.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_letter_recog.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_letter_recog.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_letter_recog.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_letter_recog.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_letter_recog.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -25973,6 +26166,7 @@ samples/cpp/CMakeFiles/example_tutorial_hull_demo.dir/all: modules/reg/CMakeFile
 samples/cpp/CMakeFiles/example_tutorial_hull_demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_hull_demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_hull_demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_hull_demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_hull_demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_hull_demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_hull_demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -26045,6 +26239,7 @@ samples/cpp/CMakeFiles/example_tutorial_Drawing_1.dir/all: modules/reg/CMakeFile
 samples/cpp/CMakeFiles/example_tutorial_Drawing_1.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Drawing_1.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Drawing_1.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_Drawing_1.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Drawing_1.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Drawing_1.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Drawing_1.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -26117,6 +26312,7 @@ samples/cpp/CMakeFiles/example_tutorial_out_of_focus_deblur_filter.dir/all: modu
 samples/cpp/CMakeFiles/example_tutorial_out_of_focus_deblur_filter.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_out_of_focus_deblur_filter.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_out_of_focus_deblur_filter.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_out_of_focus_deblur_filter.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_out_of_focus_deblur_filter.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_out_of_focus_deblur_filter.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_out_of_focus_deblur_filter.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -26189,6 +26385,7 @@ samples/cpp/CMakeFiles/example_cpp_dis_opticalflow.dir/all: modules/reg/CMakeFil
 samples/cpp/CMakeFiles/example_cpp_dis_opticalflow.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_dis_opticalflow.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_dis_opticalflow.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_dis_opticalflow.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_dis_opticalflow.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_dis_opticalflow.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_dis_opticalflow.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -26261,6 +26458,7 @@ samples/cpp/CMakeFiles/example_tutorial_CannyDetector_Demo.dir/all: modules/reg/
 samples/cpp/CMakeFiles/example_tutorial_CannyDetector_Demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_CannyDetector_Demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_CannyDetector_Demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_CannyDetector_Demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_CannyDetector_Demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_CannyDetector_Demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_CannyDetector_Demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -26333,6 +26531,7 @@ samples/cpp/CMakeFiles/example_tutorial_Smoothing.dir/all: modules/reg/CMakeFile
 samples/cpp/CMakeFiles/example_tutorial_Smoothing.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Smoothing.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Smoothing.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_Smoothing.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Smoothing.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Smoothing.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Smoothing.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -26405,6 +26604,7 @@ samples/cpp/CMakeFiles/example_tutorial_Geometric_Transforms_Demo.dir/all: modul
 samples/cpp/CMakeFiles/example_tutorial_Geometric_Transforms_Demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Geometric_Transforms_Demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Geometric_Transforms_Demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_Geometric_Transforms_Demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Geometric_Transforms_Demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Geometric_Transforms_Demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Geometric_Transforms_Demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -26477,6 +26677,7 @@ samples/cpp/CMakeFiles/example_cpp_create_mask.dir/all: modules/reg/CMakeFiles/o
 samples/cpp/CMakeFiles/example_cpp_create_mask.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_create_mask.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_create_mask.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_create_mask.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_create_mask.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_create_mask.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_create_mask.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -26549,6 +26750,7 @@ samples/cpp/CMakeFiles/example_tutorial_houghcircles.dir/all: modules/reg/CMakeF
 samples/cpp/CMakeFiles/example_tutorial_houghcircles.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_houghcircles.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_houghcircles.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_houghcircles.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_houghcircles.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_houghcircles.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_houghcircles.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -26621,6 +26823,7 @@ samples/cpp/CMakeFiles/example_tutorial_houghlines.dir/all: modules/reg/CMakeFil
 samples/cpp/CMakeFiles/example_tutorial_houghlines.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_houghlines.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_houghlines.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_houghlines.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_houghlines.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_houghlines.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_houghlines.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -26693,6 +26896,7 @@ samples/cpp/CMakeFiles/example_tutorial_findContours_demo.dir/all: modules/reg/C
 samples/cpp/CMakeFiles/example_tutorial_findContours_demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_findContours_demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_findContours_demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_findContours_demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_findContours_demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_findContours_demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_findContours_demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -26765,6 +26969,7 @@ samples/cpp/CMakeFiles/example_tutorial_Sobel_Demo.dir/all: modules/reg/CMakeFil
 samples/cpp/CMakeFiles/example_tutorial_Sobel_Demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Sobel_Demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Sobel_Demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_Sobel_Demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Sobel_Demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Sobel_Demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_Sobel_Demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -26837,6 +27042,7 @@ samples/cpp/CMakeFiles/example_tutorial_compatibility_test.dir/all: modules/reg/
 samples/cpp/CMakeFiles/example_tutorial_compatibility_test.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_compatibility_test.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_compatibility_test.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_compatibility_test.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_compatibility_test.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_compatibility_test.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_compatibility_test.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -26909,6 +27115,7 @@ samples/cpp/CMakeFiles/example_tutorial_file_input_output.dir/all: modules/reg/C
 samples/cpp/CMakeFiles/example_tutorial_file_input_output.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_file_input_output.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_file_input_output.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_file_input_output.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_file_input_output.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_file_input_output.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_file_input_output.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -26981,6 +27188,7 @@ samples/cpp/CMakeFiles/example_tutorial_copyMakeBorder_demo.dir/all: modules/reg
 samples/cpp/CMakeFiles/example_tutorial_copyMakeBorder_demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_copyMakeBorder_demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_copyMakeBorder_demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_copyMakeBorder_demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_copyMakeBorder_demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_copyMakeBorder_demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_copyMakeBorder_demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -27053,6 +27261,7 @@ samples/cpp/CMakeFiles/example_cpp_imagelist_reader.dir/all: modules/reg/CMakeFi
 samples/cpp/CMakeFiles/example_cpp_imagelist_reader.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_imagelist_reader.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_imagelist_reader.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_imagelist_reader.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_imagelist_reader.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_imagelist_reader.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_imagelist_reader.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -27125,6 +27334,7 @@ samples/cpp/CMakeFiles/example_tutorial_AddingImagesTrackbar.dir/all: modules/re
 samples/cpp/CMakeFiles/example_tutorial_AddingImagesTrackbar.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_AddingImagesTrackbar.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_AddingImagesTrackbar.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_AddingImagesTrackbar.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_AddingImagesTrackbar.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_AddingImagesTrackbar.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_AddingImagesTrackbar.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -27197,6 +27407,7 @@ samples/cpp/CMakeFiles/example_tutorial_moments_demo.dir/all: modules/reg/CMakeF
 samples/cpp/CMakeFiles/example_tutorial_moments_demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_moments_demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_moments_demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_moments_demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_moments_demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_moments_demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_moments_demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -27269,6 +27480,7 @@ samples/cpp/CMakeFiles/example_tutorial_introduction_to_svm.dir/all: modules/reg
 samples/cpp/CMakeFiles/example_tutorial_introduction_to_svm.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_introduction_to_svm.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_introduction_to_svm.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_introduction_to_svm.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_introduction_to_svm.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_introduction_to_svm.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_introduction_to_svm.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -27341,6 +27553,7 @@ samples/cpp/CMakeFiles/example_cpp_example.dir/all: modules/reg/CMakeFiles/openc
 samples/cpp/CMakeFiles/example_cpp_example.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_example.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_example.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_example.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_example.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_example.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_example.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -27413,6 +27626,7 @@ samples/cpp/CMakeFiles/example_tutorial_filter2D_demo.dir/all: modules/reg/CMake
 samples/cpp/CMakeFiles/example_tutorial_filter2D_demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_filter2D_demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_filter2D_demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_filter2D_demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_filter2D_demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_filter2D_demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_filter2D_demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -27485,6 +27699,7 @@ samples/cpp/CMakeFiles/example_tutorial_imageSegmentation.dir/all: modules/reg/C
 samples/cpp/CMakeFiles/example_tutorial_imageSegmentation.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imageSegmentation.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imageSegmentation.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_imageSegmentation.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imageSegmentation.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imageSegmentation.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_imageSegmentation.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -27557,6 +27772,7 @@ samples/cpp/CMakeFiles/example_tutorial_porting_anisotropic_image_segmentation_g
 samples/cpp/CMakeFiles/example_tutorial_porting_anisotropic_image_segmentation_gapi.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_porting_anisotropic_image_segmentation_gapi.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_porting_anisotropic_image_segmentation_gapi.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_porting_anisotropic_image_segmentation_gapi.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_porting_anisotropic_image_segmentation_gapi.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_porting_anisotropic_image_segmentation_gapi.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_porting_anisotropic_image_segmentation_gapi.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -27629,6 +27845,7 @@ samples/cpp/CMakeFiles/example_tutorial_generalContours_demo2.dir/all: modules/r
 samples/cpp/CMakeFiles/example_tutorial_generalContours_demo2.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_generalContours_demo2.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_generalContours_demo2.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_generalContours_demo2.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_generalContours_demo2.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_generalContours_demo2.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_generalContours_demo2.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -27701,6 +27918,7 @@ samples/cpp/CMakeFiles/example_cpp_dft.dir/all: modules/reg/CMakeFiles/opencv_re
 samples/cpp/CMakeFiles/example_cpp_dft.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_dft.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_dft.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_dft.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_dft.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_dft.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_dft.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -27773,6 +27991,7 @@ samples/cpp/CMakeFiles/example_tutorial_pointPolygonTest_demo.dir/all: modules/r
 samples/cpp/CMakeFiles/example_tutorial_pointPolygonTest_demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_pointPolygonTest_demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_pointPolygonTest_demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_pointPolygonTest_demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_pointPolygonTest_demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_pointPolygonTest_demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_pointPolygonTest_demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -27845,6 +28064,7 @@ samples/cpp/CMakeFiles/example_tutorial_cornerDetector_Demo.dir/all: modules/reg
 samples/cpp/CMakeFiles/example_tutorial_cornerDetector_Demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_cornerDetector_Demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_cornerDetector_Demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_cornerDetector_Demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_cornerDetector_Demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_cornerDetector_Demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_cornerDetector_Demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -27917,6 +28137,7 @@ samples/cpp/CMakeFiles/example_tutorial_periodic_noise_removing_filter.dir/all: 
 samples/cpp/CMakeFiles/example_tutorial_periodic_noise_removing_filter.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_periodic_noise_removing_filter.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_periodic_noise_removing_filter.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_periodic_noise_removing_filter.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_periodic_noise_removing_filter.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_periodic_noise_removing_filter.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_periodic_noise_removing_filter.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -27989,6 +28210,7 @@ samples/cpp/CMakeFiles/example_tutorial_cornerSubPix_Demo.dir/all: modules/reg/C
 samples/cpp/CMakeFiles/example_tutorial_cornerSubPix_Demo.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_cornerSubPix_Demo.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_cornerSubPix_Demo.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_cornerSubPix_Demo.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_cornerSubPix_Demo.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_cornerSubPix_Demo.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_cornerSubPix_Demo.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -28061,6 +28283,7 @@ samples/cpp/CMakeFiles/example_tutorial_camera_calibration.dir/all: modules/reg/
 samples/cpp/CMakeFiles/example_tutorial_camera_calibration.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_camera_calibration.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_camera_calibration.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_camera_calibration.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_camera_calibration.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_camera_calibration.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_camera_calibration.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -28133,6 +28356,7 @@ samples/cpp/CMakeFiles/example_tutorial_how_to_use_OpenCV_parallel_for_.dir/all:
 samples/cpp/CMakeFiles/example_tutorial_how_to_use_OpenCV_parallel_for_.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_how_to_use_OpenCV_parallel_for_.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_how_to_use_OpenCV_parallel_for_.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_how_to_use_OpenCV_parallel_for_.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_how_to_use_OpenCV_parallel_for_.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_how_to_use_OpenCV_parallel_for_.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_how_to_use_OpenCV_parallel_for_.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -28193,23 +28417,6 @@ samples/cpp/CMakeFiles/example_tutorial_how_to_use_OpenCV_parallel_for_.dir/clea
 # Target rules for target samples/cpp/CMakeFiles/opencv_samples_tutorial.dir
 
 # All Build rule for target.
-samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_video-write.dir/all
-samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_bg_sub.dir/all
-samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_imgproc_applyColorMap.dir/all
-samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_imgproc_HoughLinesCircles.dir/all
-samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_core_merge.dir/all
-samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_core_mat_checkVector.dir/all
-samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_cloning_gui.dir/all
-samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_npr_demo.dir/all
-samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_objectDetection.dir/all
-samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_introduction_to_pca.dir/all
-samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_introduction_windows_vs.dir/all
-samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_documentation.dir/all
-samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_display_image.dir/all
-samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_imgproc_HoughLinesPointSet.dir/all
-samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_SURF_FLANN_matching_homography_Demo.dir/all
-samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_SURF_FLANN_matching_Demo.dir/all
-samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_SURF_detection_Demo.dir/all
 samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_pose_from_homography.dir/all
 samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_perspective_correction.dir/all
 samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_imgproc_drawContours.dir/all
@@ -28291,6 +28498,23 @@ samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/e
 samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_AddingImages.dir/all
 samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_mat_operations.dir/all
 samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_mat_the_basic_image_container.dir/all
+samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_video-write.dir/all
+samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_bg_sub.dir/all
+samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_imgproc_applyColorMap.dir/all
+samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_imgproc_HoughLinesCircles.dir/all
+samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_core_merge.dir/all
+samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_core_mat_checkVector.dir/all
+samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_cloning_gui.dir/all
+samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_npr_demo.dir/all
+samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_objectDetection.dir/all
+samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_introduction_to_pca.dir/all
+samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_introduction_windows_vs.dir/all
+samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_documentation.dir/all
+samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_display_image.dir/all
+samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_imgproc_HoughLinesPointSet.dir/all
+samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_SURF_FLANN_matching_homography_Demo.dir/all
+samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_SURF_FLANN_matching_Demo.dir/all
+samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/all: samples/cpp/CMakeFiles/example_tutorial_SURF_detection_Demo.dir/all
 	$(MAKE) -f samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/build.make samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/depend
 	$(MAKE) -f samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/build.make samples/cpp/CMakeFiles/opencv_samples_tutorial.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles --progress-num= "Built target opencv_samples_tutorial"
@@ -28329,6 +28553,7 @@ samples/cpp/CMakeFiles/example_tutorial_mat_mask_operations.dir/all: modules/reg
 samples/cpp/CMakeFiles/example_tutorial_mat_mask_operations.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_mat_mask_operations.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_mat_mask_operations.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_mat_mask_operations.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_mat_mask_operations.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_mat_mask_operations.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_mat_mask_operations.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -28401,6 +28626,7 @@ samples/cpp/CMakeFiles/example_tutorial_AddingImages.dir/all: modules/reg/CMakeF
 samples/cpp/CMakeFiles/example_tutorial_AddingImages.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_AddingImages.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_AddingImages.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_AddingImages.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_AddingImages.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_AddingImages.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_AddingImages.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -28473,6 +28699,7 @@ samples/cpp/CMakeFiles/example_cpp_qrcode.dir/all: modules/reg/CMakeFiles/opencv
 samples/cpp/CMakeFiles/example_cpp_qrcode.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_cpp_qrcode.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_cpp_qrcode.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_cpp_qrcode.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_cpp_qrcode.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_cpp_qrcode.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_cpp_qrcode.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -28545,6 +28772,7 @@ samples/cpp/CMakeFiles/example_tutorial_mat_operations.dir/all: modules/reg/CMak
 samples/cpp/CMakeFiles/example_tutorial_mat_operations.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_mat_operations.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_mat_operations.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_mat_operations.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_mat_operations.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_mat_operations.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_mat_operations.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all
@@ -28617,6 +28845,7 @@ samples/cpp/CMakeFiles/example_tutorial_mat_the_basic_image_container.dir/all: m
 samples/cpp/CMakeFiles/example_tutorial_mat_the_basic_image_container.dir/all: modules/surface_matching/CMakeFiles/opencv_surface_matching.dir/all
 samples/cpp/CMakeFiles/example_tutorial_mat_the_basic_image_container.dir/all: modules/xphoto/CMakeFiles/opencv_xphoto.dir/all
 samples/cpp/CMakeFiles/example_tutorial_mat_the_basic_image_container.dir/all: modules/dnn/CMakeFiles/opencv_dnn.dir/all
+samples/cpp/CMakeFiles/example_tutorial_mat_the_basic_image_container.dir/all: modules/freetype/CMakeFiles/opencv_freetype.dir/all
 samples/cpp/CMakeFiles/example_tutorial_mat_the_basic_image_container.dir/all: modules/fuzzy/CMakeFiles/opencv_fuzzy.dir/all
 samples/cpp/CMakeFiles/example_tutorial_mat_the_basic_image_container.dir/all: modules/gapi/CMakeFiles/opencv_gapi.dir/all
 samples/cpp/CMakeFiles/example_tutorial_mat_the_basic_image_container.dir/all: modules/hfs/CMakeFiles/opencv_hfs.dir/all

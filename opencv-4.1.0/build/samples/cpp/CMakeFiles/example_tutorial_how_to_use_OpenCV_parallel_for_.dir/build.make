@@ -88,6 +88,7 @@ bin/example_tutorial_how_to_use_OpenCV_parallel_for_: lib/libopencv_ccalib.so.4.
 bin/example_tutorial_how_to_use_OpenCV_parallel_for_: lib/libopencv_dnn_objdetect.so.4.1.0
 bin/example_tutorial_how_to_use_OpenCV_parallel_for_: lib/libopencv_dpm.so.4.1.0
 bin/example_tutorial_how_to_use_OpenCV_parallel_for_: lib/libopencv_face.so.4.1.0
+bin/example_tutorial_how_to_use_OpenCV_parallel_for_: lib/libopencv_freetype.so.4.1.0
 bin/example_tutorial_how_to_use_OpenCV_parallel_for_: lib/libopencv_fuzzy.so.4.1.0
 bin/example_tutorial_how_to_use_OpenCV_parallel_for_: lib/libopencv_hfs.so.4.1.0
 bin/example_tutorial_how_to_use_OpenCV_parallel_for_: lib/libopencv_img_hash.so.4.1.0

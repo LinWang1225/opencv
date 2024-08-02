@@ -1009,6 +1009,19 @@ opencv_dnn/fast:
 .PHONY : opencv_dnn/fast
 
 #=============================================================================
+# Target rules for targets named opencv_freetype
+
+# Build rule for target.
+opencv_freetype: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 opencv_freetype
+.PHONY : opencv_freetype
+
+# fast build rule for target.
+opencv_freetype/fast:
+	$(MAKE) -f modules/freetype/CMakeFiles/opencv_freetype.dir/build.make modules/freetype/CMakeFiles/opencv_freetype.dir/build
+.PHONY : opencv_freetype/fast
+
+#=============================================================================
 # Target rules for targets named opencv_fuzzy
 
 # Build rule for target.
@@ -7040,6 +7053,7 @@ help:
 	@echo "... opencv_perf_dnn"
 	@echo "... opencv_test_dnn"
 	@echo "... opencv_dnn"
+	@echo "... opencv_freetype"
 	@echo "... opencv_fuzzy"
 	@echo "... example_fuzzy_fuzzy_filtering"
 	@echo "... opencv_samples_fuzzy"

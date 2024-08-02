@@ -88,6 +88,7 @@ bin/example_tutorial_anisotropic_image_segmentation: lib/libopencv_ccalib.so.4.1
 bin/example_tutorial_anisotropic_image_segmentation: lib/libopencv_dnn_objdetect.so.4.1.0
 bin/example_tutorial_anisotropic_image_segmentation: lib/libopencv_dpm.so.4.1.0
 bin/example_tutorial_anisotropic_image_segmentation: lib/libopencv_face.so.4.1.0
+bin/example_tutorial_anisotropic_image_segmentation: lib/libopencv_freetype.so.4.1.0
 bin/example_tutorial_anisotropic_image_segmentation: lib/libopencv_fuzzy.so.4.1.0
 bin/example_tutorial_anisotropic_image_segmentation: lib/libopencv_hfs.so.4.1.0
 bin/example_tutorial_anisotropic_image_segmentation: lib/libopencv_img_hash.so.4.1.0

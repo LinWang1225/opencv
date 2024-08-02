@@ -198,6 +198,9 @@ BUILD_opencv_features2d:BOOL=ON
 //Include opencv_flann module into the OpenCV build
 BUILD_opencv_flann:BOOL=ON
 
+//Include opencv_freetype module into the OpenCV build
+BUILD_opencv_freetype:BOOL=ON
+
 //Include opencv_fuzzy module into the OpenCV build
 BUILD_opencv_fuzzy:BOOL=ON
 
@@ -1332,6 +1335,15 @@ opencv_flann_LIB_DEPENDS:STATIC=general;opencv_core;general;dl;general;m;general
 opencv_flann_SOURCE_DIR:STATIC=/home/linlin/Documents/OpenCV/opencv-4.1.0/modules/flann
 
 //Value Computed by CMake
+opencv_freetype_BINARY_DIR:STATIC=/home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/freetype
+
+//Dependencies for the target
+opencv_freetype_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_imgproc;general;dl;general;m;general;pthread;general;rt;general;freetype;general;harfbuzz;
+
+//Value Computed by CMake
+opencv_freetype_SOURCE_DIR:STATIC=/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/freetype
+
+//Value Computed by CMake
 opencv_fuzzy_BINARY_DIR:STATIC=/home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/fuzzy
 
 //Dependencies for the target
@@ -1682,6 +1694,12 @@ openexr_SOURCE_DIR:STATIC=/home/linlin/Documents/OpenCV/opencv-4.1.0/3rdparty/op
 //support for Macintosh PackBits algorithm
 packbits:BOOL=ON
 
+//Path to a library.
+pkgcfg_lib_FREETYPE_freetype:FILEPATH=pkgcfg_lib_FREETYPE_freetype-NOTFOUND
+
+//Path to a library.
+pkgcfg_lib_HARFBUZZ_harfbuzz:FILEPATH=pkgcfg_lib_HARFBUZZ_harfbuzz-NOTFOUND
+
 //Value Computed by CMake
 quirc_BINARY_DIR:STATIC=/home/linlin/Documents/OpenCV/opencv-4.1.0/build/3rdparty/quirc
 
@@ -1893,7 +1911,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=153
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=154
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -2071,27 +2089,37 @@ FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29.1()]
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python3][v3.8.10(3.2)]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
-FREETYPE_CFLAGS:INTERNAL=
+FREETYPE_CFLAGS:INTERNAL=-I/usr/include/freetype2;-I/usr/include/libpng16
 FREETYPE_CFLAGS_I:INTERNAL=
 FREETYPE_CFLAGS_OTHER:INTERNAL=
-FREETYPE_FOUND:INTERNAL=
-FREETYPE_INCLUDEDIR:INTERNAL=
-FREETYPE_LIBDIR:INTERNAL=
+FREETYPE_FOUND:INTERNAL=1
+FREETYPE_INCLUDEDIR:INTERNAL=/usr/include
+FREETYPE_INCLUDE_DIRS:INTERNAL=/usr/include/freetype2;/usr/include/libpng16
+FREETYPE_LDFLAGS:INTERNAL=-lfreetype
+FREETYPE_LDFLAGS_OTHER:INTERNAL=
+FREETYPE_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+FREETYPE_LIBRARIES:INTERNAL=freetype
+FREETYPE_LIBRARY_DIRS:INTERNAL=
 FREETYPE_LIBS:INTERNAL=
 FREETYPE_LIBS_L:INTERNAL=
 FREETYPE_LIBS_OTHER:INTERNAL=
 FREETYPE_LIBS_PATHS:INTERNAL=
-FREETYPE_MODULE_NAME:INTERNAL=
-FREETYPE_PREFIX:INTERNAL=
-FREETYPE_STATIC_CFLAGS:INTERNAL=
+FREETYPE_MODULE_NAME:INTERNAL=freetype2
+FREETYPE_PREFIX:INTERNAL=/usr
+FREETYPE_STATIC_CFLAGS:INTERNAL=-I/usr/include/freetype2;-I/usr/include/libpng16
 FREETYPE_STATIC_CFLAGS_I:INTERNAL=
 FREETYPE_STATIC_CFLAGS_OTHER:INTERNAL=
+FREETYPE_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/freetype2;/usr/include/libpng16
+FREETYPE_STATIC_LDFLAGS:INTERNAL=-lfreetype;-lpng16;-lm;-lz;-lm;-lz
+FREETYPE_STATIC_LDFLAGS_OTHER:INTERNAL=
 FREETYPE_STATIC_LIBDIR:INTERNAL=
+FREETYPE_STATIC_LIBRARIES:INTERNAL=freetype;png16;m;z;m;z
+FREETYPE_STATIC_LIBRARY_DIRS:INTERNAL=
 FREETYPE_STATIC_LIBS:INTERNAL=
 FREETYPE_STATIC_LIBS_L:INTERNAL=
 FREETYPE_STATIC_LIBS_OTHER:INTERNAL=
 FREETYPE_STATIC_LIBS_PATHS:INTERNAL=
-FREETYPE_VERSION:INTERNAL=
+FREETYPE_VERSION:INTERNAL=23.1.17
 FREETYPE_freetype2_INCLUDEDIR:INTERNAL=
 FREETYPE_freetype2_LIBDIR:INTERNAL=
 FREETYPE_freetype2_PREFIX:INTERNAL=
@@ -2204,27 +2232,37 @@ GSTREAMER_riff_gstreamer-riff-1.0_INCLUDEDIR:INTERNAL=
 GSTREAMER_riff_gstreamer-riff-1.0_LIBDIR:INTERNAL=
 GSTREAMER_riff_gstreamer-riff-1.0_PREFIX:INTERNAL=
 GSTREAMER_riff_gstreamer-riff-1.0_VERSION:INTERNAL=
-HARFBUZZ_CFLAGS:INTERNAL=
+HARFBUZZ_CFLAGS:INTERNAL=-I/usr/include/harfbuzz;-I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-gnu/glib-2.0/include
 HARFBUZZ_CFLAGS_I:INTERNAL=
 HARFBUZZ_CFLAGS_OTHER:INTERNAL=
-HARFBUZZ_FOUND:INTERNAL=
-HARFBUZZ_INCLUDEDIR:INTERNAL=
-HARFBUZZ_LIBDIR:INTERNAL=
+HARFBUZZ_FOUND:INTERNAL=1
+HARFBUZZ_INCLUDEDIR:INTERNAL=/usr/include
+HARFBUZZ_INCLUDE_DIRS:INTERNAL=/usr/include/harfbuzz;/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include
+HARFBUZZ_LDFLAGS:INTERNAL=-lharfbuzz
+HARFBUZZ_LDFLAGS_OTHER:INTERNAL=
+HARFBUZZ_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+HARFBUZZ_LIBRARIES:INTERNAL=harfbuzz
+HARFBUZZ_LIBRARY_DIRS:INTERNAL=
 HARFBUZZ_LIBS:INTERNAL=
 HARFBUZZ_LIBS_L:INTERNAL=
 HARFBUZZ_LIBS_OTHER:INTERNAL=
 HARFBUZZ_LIBS_PATHS:INTERNAL=
-HARFBUZZ_MODULE_NAME:INTERNAL=
-HARFBUZZ_PREFIX:INTERNAL=
-HARFBUZZ_STATIC_CFLAGS:INTERNAL=
+HARFBUZZ_MODULE_NAME:INTERNAL=harfbuzz
+HARFBUZZ_PREFIX:INTERNAL=/usr
+HARFBUZZ_STATIC_CFLAGS:INTERNAL=-I/usr/include/harfbuzz;-I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-gnu/glib-2.0/include
 HARFBUZZ_STATIC_CFLAGS_I:INTERNAL=
 HARFBUZZ_STATIC_CFLAGS_OTHER:INTERNAL=
+HARFBUZZ_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/harfbuzz;/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include
+HARFBUZZ_STATIC_LDFLAGS:INTERNAL=-lharfbuzz;-lm;-lglib-2.0;-pthread;-lpcre;-pthread;-lgraphite2
+HARFBUZZ_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread
 HARFBUZZ_STATIC_LIBDIR:INTERNAL=
+HARFBUZZ_STATIC_LIBRARIES:INTERNAL=harfbuzz;m;glib-2.0;pcre;graphite2
+HARFBUZZ_STATIC_LIBRARY_DIRS:INTERNAL=
 HARFBUZZ_STATIC_LIBS:INTERNAL=
 HARFBUZZ_STATIC_LIBS_L:INTERNAL=
 HARFBUZZ_STATIC_LIBS_OTHER:INTERNAL=
 HARFBUZZ_STATIC_LIBS_PATHS:INTERNAL=
-HARFBUZZ_VERSION:INTERNAL=
+HARFBUZZ_VERSION:INTERNAL=2.6.4
 HARFBUZZ_harfbuzz_INCLUDEDIR:INTERNAL=
 HARFBUZZ_harfbuzz_LIBDIR:INTERNAL=
 HARFBUZZ_harfbuzz_PREFIX:INTERNAL=
@@ -2643,8 +2681,8 @@ HAVE_opencv_face:INTERNAL=ON
 HAVE_opencv_features2d:INTERNAL=ON
 //Module opencv_flann will be built in current configuration
 HAVE_opencv_flann:INTERNAL=ON
-//Module opencv_freetype can not be built in current configuration
-HAVE_opencv_freetype:INTERNAL=OFF
+//Module opencv_freetype will be built in current configuration
+HAVE_opencv_freetype:INTERNAL=ON
 //Module opencv_fuzzy will be built in current configuration
 HAVE_opencv_fuzzy:INTERNAL=ON
 //Module opencv_gapi will be built in current configuration
@@ -2788,11 +2826,11 @@ OPENCV_DEPHELPER:INTERNAL=/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMake
 OPENCV_JAVA_BINDINGS_DIR:INTERNAL=/home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/java_bindings_generator
 OPENCV_JAVA_SIGNATURES_FILE:INTERNAL=/home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/java_bindings_generator/opencv_java_signatures.json
 //List of OpenCV modules included into the build
-OPENCV_MODULES_BUILD:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_java_bindings_generator;opencv_ml;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_quality;opencv_reg;opencv_surface_matching;opencv_xphoto;opencv_dnn;opencv_fuzzy;opencv_gapi;opencv_hfs;opencv_img_hash;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_ts;opencv_bioinspired;opencv_dnn_objdetect;opencv_features2d;opencv_line_descriptor;opencv_saliency;opencv_text;opencv_calib3d;opencv_ccalib;opencv_datasets;opencv_objdetect;opencv_rgbd;opencv_shape;opencv_structured_light;opencv_video;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_aruco;opencv_bgsegm;opencv_dpm;opencv_face;opencv_optflow;opencv_stitching;opencv_superres;opencv_tracking;opencv_python_bindings_generator;opencv_stereo
+OPENCV_MODULES_BUILD:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_java_bindings_generator;opencv_ml;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_quality;opencv_reg;opencv_surface_matching;opencv_xphoto;opencv_dnn;opencv_freetype;opencv_fuzzy;opencv_gapi;opencv_hfs;opencv_img_hash;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_ts;opencv_bioinspired;opencv_dnn_objdetect;opencv_features2d;opencv_line_descriptor;opencv_saliency;opencv_text;opencv_calib3d;opencv_ccalib;opencv_datasets;opencv_objdetect;opencv_rgbd;opencv_shape;opencv_structured_light;opencv_video;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_aruco;opencv_bgsegm;opencv_dpm;opencv_face;opencv_optflow;opencv_stitching;opencv_superres;opencv_tracking;opencv_python_bindings_generator;opencv_stereo
 //List of OpenCV modules implicitly disabled due to dependencies
 OPENCV_MODULES_DISABLED_AUTO:INTERNAL=
 //List of OpenCV modules which can not be build in current configuration
-OPENCV_MODULES_DISABLED_FORCE:INTERNAL=opencv_java;opencv_js;opencv_python2;opencv_python3;opencv_cnn_3dobj;opencv_cudaarithm;opencv_cudabgsegm;opencv_cudacodec;opencv_cudafeatures2d;opencv_cudafilters;opencv_cudaimgproc;opencv_cudalegacy;opencv_cudaobjdetect;opencv_cudaoptflow;opencv_cudastereo;opencv_cudawarping;opencv_cudev;opencv_cvv;opencv_freetype;opencv_hdf;opencv_matlab;opencv_ovis;opencv_sfm;opencv_viz
+OPENCV_MODULES_DISABLED_FORCE:INTERNAL=opencv_java;opencv_js;opencv_python2;opencv_python3;opencv_cnn_3dobj;opencv_cudaarithm;opencv_cudabgsegm;opencv_cudacodec;opencv_cudafeatures2d;opencv_cudafilters;opencv_cudaimgproc;opencv_cudalegacy;opencv_cudaobjdetect;opencv_cudaoptflow;opencv_cudastereo;opencv_cudawarping;opencv_cudev;opencv_cvv;opencv_hdf;opencv_matlab;opencv_ovis;opencv_sfm;opencv_viz
 //List of OpenCV modules explicitly disabled by user
 OPENCV_MODULES_DISABLED_USER:INTERNAL=opencv_world
 //List of extra modules
@@ -2800,7 +2838,7 @@ OPENCV_MODULES_EXTRA:INTERNAL=aruco;bgsegm;bioinspired;ccalib;cnn_3dobj;cudaarit
 //List of main modules
 OPENCV_MODULES_MAIN:INTERNAL=core;imgproc;imgcodecs;videoio;highgui;video;calib3d;features2d;objdetect;dnn;ml;flann;photo;stitching;gapi;java;js;ts;world
 //List of OpenCV modules marked for export
-OPENCV_MODULES_PUBLIC:INTERNAL=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_gapi;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dnn_objdetect;opencv_dpm;opencv_face;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_stereo;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
+OPENCV_MODULES_PUBLIC:INTERNAL=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_gapi;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dnn_objdetect;opencv_dpm;opencv_face;opencv_freetype;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_stereo;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
 OPENCV_MODULE_opencv_aruco_BINARY_DIR:INTERNAL=/home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/aruco
 //The category of the module
 OPENCV_MODULE_opencv_aruco_CLASS:INTERNAL=PUBLIC
@@ -3219,8 +3257,36 @@ OPENCV_MODULE_opencv_flann_REQ_DEPS:INTERNAL=opencv_core
 OPENCV_MODULE_opencv_flann_SOURCES:INTERNAL=/home/linlin/Documents/OpenCV/opencv-4.1.0/modules/flann/src/flann.cpp;/home/linlin/Documents/OpenCV/opencv-4.1.0/modules/flann/src/miniflann.cpp;/home/linlin/Documents/OpenCV/opencv-4.1.0/modules/flann/src/precomp.hpp
 //List of wrappers supporting module opencv_flann
 OPENCV_MODULE_opencv_flann_WRAPPERS:INTERNAL=python_bindings_generator;python2;python3
+OPENCV_MODULE_opencv_freetype_BINARY_DIR:INTERNAL=/home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/freetype
+//The category of the module
+OPENCV_MODULE_opencv_freetype_CLASS:INTERNAL=PUBLIC
+//Flattened dependencies of opencv_freetype module
+OPENCV_MODULE_opencv_freetype_DEPS:INTERNAL=opencv_core;opencv_imgproc
+//Extra dependencies of opencv_freetype module
+OPENCV_MODULE_opencv_freetype_DEPS_EXT:INTERNAL=
+//Flattened dependencies of opencv_freetype module (for linker)
+OPENCV_MODULE_opencv_freetype_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_imgproc
+//Brief description of opencv_freetype module
+OPENCV_MODULE_opencv_freetype_DESCRIPTION:INTERNAL=FreeType module. It enables to draw strings with outlines and mono-bitmaps/gray-bitmaps.
+//List of header files for opencv_freetype
+OPENCV_MODULE_opencv_freetype_HEADERS:INTERNAL=/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/freetype/include/opencv2/freetype.hpp
+OPENCV_MODULE_opencv_freetype_IS_PART_OF_WORLD:INTERNAL=ON
+OPENCV_MODULE_opencv_freetype_LABEL:INTERNAL=Extra;opencv_freetype
+OPENCV_MODULE_opencv_freetype_LINK_DEPS:INTERNAL=
 //Location of opencv_freetype module sources
 OPENCV_MODULE_opencv_freetype_LOCATION:INTERNAL=/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/freetype
+//Optional dependencies of opencv_freetype module
+OPENCV_MODULE_opencv_freetype_OPT_DEPS:INTERNAL=
+//Optional private dependencies of opencv_freetype module
+OPENCV_MODULE_opencv_freetype_PRIVATE_OPT_DEPS:INTERNAL=
+//Required private dependencies of opencv_freetype module
+OPENCV_MODULE_opencv_freetype_PRIVATE_REQ_DEPS:INTERNAL=
+//Required dependencies of opencv_freetype module
+OPENCV_MODULE_opencv_freetype_REQ_DEPS:INTERNAL=opencv_core;opencv_imgproc
+//List of source files for opencv_freetype
+OPENCV_MODULE_opencv_freetype_SOURCES:INTERNAL=/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/freetype/src/freetype.cpp;/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/freetype/src/precomp.hpp
+//List of wrappers supporting module opencv_freetype
+OPENCV_MODULE_opencv_freetype_WRAPPERS:INTERNAL=python_bindings_generator;python2;python3
 OPENCV_MODULE_opencv_fuzzy_BINARY_DIR:INTERNAL=/home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/fuzzy
 //The category of the module
 OPENCV_MODULE_opencv_fuzzy_CLASS:INTERNAL=PUBLIC
@@ -3705,7 +3771,7 @@ OPENCV_MODULE_opencv_plot_WRAPPERS:INTERNAL=java;python_bindings_generator;pytho
 //Location of opencv_python2 module sources
 OPENCV_MODULE_opencv_python2_LOCATION:INTERNAL=/home/linlin/Documents/OpenCV/opencv-4.1.0/modules/python/python2
 //Optional dependencies of opencv_python2 module
-OPENCV_MODULE_opencv_python2_OPT_DEPS:INTERNAL=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dpm;opencv_face;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
+OPENCV_MODULE_opencv_python2_OPT_DEPS:INTERNAL=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dpm;opencv_face;opencv_freetype;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
 //Optional private dependencies of opencv_python2 module
 OPENCV_MODULE_opencv_python2_PRIVATE_OPT_DEPS:INTERNAL=
 //Required private dependencies of opencv_python2 module
@@ -3717,7 +3783,7 @@ OPENCV_MODULE_opencv_python2_WRAPPERS:INTERNAL=
 //Location of opencv_python3 module sources
 OPENCV_MODULE_opencv_python3_LOCATION:INTERNAL=/home/linlin/Documents/OpenCV/opencv-4.1.0/modules/python/python3
 //Optional dependencies of opencv_python3 module
-OPENCV_MODULE_opencv_python3_OPT_DEPS:INTERNAL=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dpm;opencv_face;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
+OPENCV_MODULE_opencv_python3_OPT_DEPS:INTERNAL=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dpm;opencv_face;opencv_freetype;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
 //Optional private dependencies of opencv_python3 module
 OPENCV_MODULE_opencv_python3_PRIVATE_OPT_DEPS:INTERNAL=
 //Required private dependencies of opencv_python3 module
@@ -3730,12 +3796,12 @@ OPENCV_MODULE_opencv_python_bindings_generator_BINARY_DIR:INTERNAL=/home/linlin/
 //The category of the module
 OPENCV_MODULE_opencv_python_bindings_generator_CLASS:INTERNAL=INTERNAL
 //Flattened dependencies of opencv_python_bindings_generator module
-OPENCV_MODULE_opencv_python_bindings_generator_DEPS:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_quality;opencv_reg;opencv_surface_matching;opencv_xphoto;opencv_dnn;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_bioinspired;opencv_features2d;opencv_line_descriptor;opencv_saliency;opencv_text;opencv_calib3d;opencv_ccalib;opencv_datasets;opencv_objdetect;opencv_rgbd;opencv_shape;opencv_structured_light;opencv_video;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_aruco;opencv_bgsegm;opencv_dpm;opencv_face;opencv_optflow;opencv_stitching;opencv_superres;opencv_tracking
+OPENCV_MODULE_opencv_python_bindings_generator_DEPS:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_quality;opencv_reg;opencv_surface_matching;opencv_xphoto;opencv_dnn;opencv_freetype;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_bioinspired;opencv_features2d;opencv_line_descriptor;opencv_saliency;opencv_text;opencv_calib3d;opencv_ccalib;opencv_datasets;opencv_objdetect;opencv_rgbd;opencv_shape;opencv_structured_light;opencv_video;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_aruco;opencv_bgsegm;opencv_dpm;opencv_face;opencv_optflow;opencv_stitching;opencv_superres;opencv_tracking
 //Extra dependencies of opencv_python_bindings_generator module
 OPENCV_MODULE_opencv_python_bindings_generator_DEPS_EXT:INTERNAL=
 //Flattened dependencies of opencv_python_bindings_generator module
 // (for linker)
-OPENCV_MODULE_opencv_python_bindings_generator_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_quality;opencv_reg;opencv_surface_matching;opencv_xphoto;opencv_dnn;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_bioinspired;opencv_features2d;opencv_line_descriptor;opencv_saliency;opencv_text;opencv_calib3d;opencv_ccalib;opencv_datasets;opencv_objdetect;opencv_rgbd;opencv_shape;opencv_structured_light;opencv_video;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_aruco;opencv_bgsegm;opencv_dpm;opencv_face;opencv_optflow;opencv_stitching;opencv_superres;opencv_tracking
+OPENCV_MODULE_opencv_python_bindings_generator_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_quality;opencv_reg;opencv_surface_matching;opencv_xphoto;opencv_dnn;opencv_freetype;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_bioinspired;opencv_features2d;opencv_line_descriptor;opencv_saliency;opencv_text;opencv_calib3d;opencv_ccalib;opencv_datasets;opencv_objdetect;opencv_rgbd;opencv_shape;opencv_structured_light;opencv_video;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_aruco;opencv_bgsegm;opencv_dpm;opencv_face;opencv_optflow;opencv_stitching;opencv_superres;opencv_tracking
 //Brief description of opencv_python_bindings_generator module
 OPENCV_MODULE_opencv_python_bindings_generator_DESCRIPTION:INTERNAL=The python_bindings_generator OpenCV module
 OPENCV_MODULE_opencv_python_bindings_generator_IS_PART_OF_WORLD:INTERNAL=OFF
@@ -3744,7 +3810,7 @@ OPENCV_MODULE_opencv_python_bindings_generator_LINK_DEPS:INTERNAL=
 //Location of opencv_python_bindings_generator module sources
 OPENCV_MODULE_opencv_python_bindings_generator_LOCATION:INTERNAL=/home/linlin/Documents/OpenCV/opencv-4.1.0/modules/python/bindings
 //Optional dependencies of opencv_python_bindings_generator module
-OPENCV_MODULE_opencv_python_bindings_generator_OPT_DEPS:INTERNAL=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dpm;opencv_face;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
+OPENCV_MODULE_opencv_python_bindings_generator_OPT_DEPS:INTERNAL=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dpm;opencv_face;opencv_freetype;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
 //Optional private dependencies of opencv_python_bindings_generator
 // module
 OPENCV_MODULE_opencv_python_bindings_generator_PRIVATE_OPT_DEPS:INTERNAL=
@@ -4251,7 +4317,7 @@ OPENCV_MODULE_opencv_world_LINK_DEPS:INTERNAL=
 //Location of opencv_world module sources
 OPENCV_MODULE_opencv_world_LOCATION:INTERNAL=/home/linlin/Documents/OpenCV/opencv-4.1.0/modules/world
 //Optional dependencies of opencv_world module
-OPENCV_MODULE_opencv_world_OPT_DEPS:INTERNAL=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_gapi;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dnn_objdetect;opencv_dpm;opencv_face;opencv_fuzzy;opencv_hfs;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_stereo;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
+OPENCV_MODULE_opencv_world_OPT_DEPS:INTERNAL=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_gapi;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dnn_objdetect;opencv_dpm;opencv_face;opencv_freetype;opencv_fuzzy;opencv_hfs;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_stereo;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
 //Optional private dependencies of opencv_world module
 OPENCV_MODULE_opencv_world_PRIVATE_OPT_DEPS:INTERNAL=
 //Required private dependencies of opencv_world module
@@ -4401,7 +4467,7 @@ OpenCL_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OpenCL_LIBRARY
 OpenCL_LIBRARY-ADVANCED:INTERNAL=1
 //List of OpenCVModules targets
-OpenCVModules_TARGETS:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_quality;opencv_reg;opencv_surface_matching;opencv_xphoto;opencv_dnn;opencv_fuzzy;opencv_gapi;opencv_hfs;opencv_img_hash;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_bioinspired;opencv_dnn_objdetect;opencv_features2d;opencv_line_descriptor;opencv_saliency;opencv_text;opencv_calib3d;opencv_ccalib;opencv_datasets;opencv_objdetect;opencv_rgbd;opencv_shape;opencv_structured_light;opencv_video;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_aruco;opencv_bgsegm;opencv_dpm;opencv_face;opencv_optflow;opencv_stitching;opencv_superres;opencv_tracking;opencv_stereo
+OpenCVModules_TARGETS:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_quality;opencv_reg;opencv_surface_matching;opencv_xphoto;opencv_dnn;opencv_freetype;opencv_fuzzy;opencv_gapi;opencv_hfs;opencv_img_hash;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_bioinspired;opencv_dnn_objdetect;opencv_features2d;opencv_line_descriptor;opencv_saliency;opencv_text;opencv_calib3d;opencv_ccalib;opencv_datasets;opencv_objdetect;opencv_rgbd;opencv_shape;opencv_structured_light;opencv_video;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_aruco;opencv_bgsegm;opencv_dpm;opencv_face;opencv_optflow;opencv_stitching;opencv_superres;opencv_tracking;opencv_stereo
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 PYTHON2INTERP_FOUND:INTERNAL=
@@ -4490,4 +4556,9 @@ int16:INTERNAL=
 int32:INTERNAL=
 //CHECK_TYPE_SIZE: INT8 unknown
 int8:INTERNAL=
+//ADVANCED property for variable: pkgcfg_lib_FREETYPE_freetype
+pkgcfg_lib_FREETYPE_freetype-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_HARFBUZZ_harfbuzz
+pkgcfg_lib_HARFBUZZ_harfbuzz-ADVANCED:INTERNAL=1
+prefix_result:INTERNAL=/usr/lib/x86_64-linux-gnu
 

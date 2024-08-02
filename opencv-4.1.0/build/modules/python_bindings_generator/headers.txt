@@ -89,6 +89,7 @@
 /home/linlin/Documents/OpenCV/opencv-4.1.0/modules/dnn/include/opencv2/dnn/layer.hpp
 /home/linlin/Documents/OpenCV/opencv-4.1.0/modules/dnn/include/opencv2/dnn/shape_utils.hpp
 /home/linlin/Documents/OpenCV/opencv-4.1.0/modules/dnn/include/opencv2/dnn/version.hpp
+/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/freetype/include/opencv2/freetype.hpp
 /home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/fuzzy/include/opencv2/fuzzy.hpp
 /home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/fuzzy/include/opencv2/fuzzy/fuzzy_F0_math.hpp
 /home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/fuzzy/include/opencv2/fuzzy/fuzzy_F1_math.hpp

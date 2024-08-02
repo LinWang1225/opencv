@@ -88,6 +88,7 @@ bin/example_tutorial_panorama_stitching_rotating_camera: lib/libopencv_ccalib.so
 bin/example_tutorial_panorama_stitching_rotating_camera: lib/libopencv_dnn_objdetect.so.4.1.0
 bin/example_tutorial_panorama_stitching_rotating_camera: lib/libopencv_dpm.so.4.1.0
 bin/example_tutorial_panorama_stitching_rotating_camera: lib/libopencv_face.so.4.1.0
+bin/example_tutorial_panorama_stitching_rotating_camera: lib/libopencv_freetype.so.4.1.0
 bin/example_tutorial_panorama_stitching_rotating_camera: lib/libopencv_fuzzy.so.4.1.0
 bin/example_tutorial_panorama_stitching_rotating_camera: lib/libopencv_hfs.so.4.1.0
 bin/example_tutorial_panorama_stitching_rotating_camera: lib/libopencv_img_hash.so.4.1.0

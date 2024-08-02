@@ -88,6 +88,7 @@ bin/example_tutorial_porting_anisotropic_image_segmentation_gapi: lib/libopencv_
 bin/example_tutorial_porting_anisotropic_image_segmentation_gapi: lib/libopencv_dnn_objdetect.so.4.1.0
 bin/example_tutorial_porting_anisotropic_image_segmentation_gapi: lib/libopencv_dpm.so.4.1.0
 bin/example_tutorial_porting_anisotropic_image_segmentation_gapi: lib/libopencv_face.so.4.1.0
+bin/example_tutorial_porting_anisotropic_image_segmentation_gapi: lib/libopencv_freetype.so.4.1.0
 bin/example_tutorial_porting_anisotropic_image_segmentation_gapi: lib/libopencv_fuzzy.so.4.1.0
 bin/example_tutorial_porting_anisotropic_image_segmentation_gapi: lib/libopencv_hfs.so.4.1.0
 bin/example_tutorial_porting_anisotropic_image_segmentation_gapi: lib/libopencv_img_hash.so.4.1.0

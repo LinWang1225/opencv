@@ -88,6 +88,7 @@ bin/example_cpp_train_svmsgd: lib/libopencv_ccalib.so.4.1.0
 bin/example_cpp_train_svmsgd: lib/libopencv_dnn_objdetect.so.4.1.0
 bin/example_cpp_train_svmsgd: lib/libopencv_dpm.so.4.1.0
 bin/example_cpp_train_svmsgd: lib/libopencv_face.so.4.1.0
+bin/example_cpp_train_svmsgd: lib/libopencv_freetype.so.4.1.0
 bin/example_cpp_train_svmsgd: lib/libopencv_fuzzy.so.4.1.0
 bin/example_cpp_train_svmsgd: lib/libopencv_hfs.so.4.1.0
 bin/example_cpp_train_svmsgd: lib/libopencv_img_hash.so.4.1.0

@@ -154,6 +154,7 @@ modules/python_bindings_generator/pyopencv_generated_include.h: ../modules/dnn/i
 modules/python_bindings_generator/pyopencv_generated_include.h: ../modules/dnn/include/opencv2/dnn/layer.hpp
 modules/python_bindings_generator/pyopencv_generated_include.h: ../modules/dnn/include/opencv2/dnn/shape_utils.hpp
 modules/python_bindings_generator/pyopencv_generated_include.h: ../modules/dnn/include/opencv2/dnn/version.hpp
+modules/python_bindings_generator/pyopencv_generated_include.h: /home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/freetype/include/opencv2/freetype.hpp
 modules/python_bindings_generator/pyopencv_generated_include.h: /home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/fuzzy/include/opencv2/fuzzy.hpp
 modules/python_bindings_generator/pyopencv_generated_include.h: /home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/fuzzy/include/opencv2/fuzzy/fuzzy_F0_math.hpp
 modules/python_bindings_generator/pyopencv_generated_include.h: /home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/fuzzy/include/opencv2/fuzzy/fuzzy_F1_math.hpp

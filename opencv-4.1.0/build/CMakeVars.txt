@@ -77,6 +77,7 @@ BUILD_opencv_dpm=ON
 BUILD_opencv_face=ON
 BUILD_opencv_features2d=ON
 BUILD_opencv_flann=ON
+BUILD_opencv_freetype=ON
 BUILD_opencv_fuzzy=ON
 BUILD_opencv_gapi=ON
 BUILD_opencv_hfs=ON
@@ -456,7 +457,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE=
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO=
 CMAKE_MT=
 CMAKE_NM=/toolchain/bin/riscv64-unknown-linux-gnu-nm
-CMAKE_NUMBER_OF_MAKEFILES=153
+CMAKE_NUMBER_OF_MAKEFILES=154
 CMAKE_OBJCOPY=/toolchain/bin/riscv64-unknown-linux-gnu-objcopy
 CMAKE_OBJDUMP=/toolchain/bin/riscv64-unknown-linux-gnu-objdump
 CMAKE_PARENT_LIST_FILE=/home/linlin/Documents/OpenCV/opencv-4.1.0/CMakeLists.txt
@@ -816,27 +817,37 @@ FIND_PACKAGE_MESSAGE_DETAILS_JPEG=[libjpeg-turbo][/home/linlin/Documents/OpenCV/
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig=[/usr/bin/pkg-config][v0.29.1()]
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp=[/usr/bin/python3][v3.8.10(3.2)]
 FIND_PACKAGE_MESSAGE_DETAILS_Threads=[TRUE][v()]
-FREETYPE_CFLAGS=
+FREETYPE_CFLAGS=-I/usr/include/freetype2;-I/usr/include/libpng16
 FREETYPE_CFLAGS_I=
 FREETYPE_CFLAGS_OTHER=
-FREETYPE_FOUND=
-FREETYPE_INCLUDEDIR=
-FREETYPE_LIBDIR=
+FREETYPE_FOUND=1
+FREETYPE_INCLUDEDIR=/usr/include
+FREETYPE_INCLUDE_DIRS=/usr/include/freetype2;/usr/include/libpng16
+FREETYPE_LDFLAGS=-lfreetype
+FREETYPE_LDFLAGS_OTHER=
+FREETYPE_LIBDIR=/usr/lib/x86_64-linux-gnu
+FREETYPE_LIBRARIES=freetype
+FREETYPE_LIBRARY_DIRS=
 FREETYPE_LIBS=
 FREETYPE_LIBS_L=
 FREETYPE_LIBS_OTHER=
 FREETYPE_LIBS_PATHS=
-FREETYPE_MODULE_NAME=
-FREETYPE_PREFIX=
-FREETYPE_STATIC_CFLAGS=
+FREETYPE_MODULE_NAME=freetype2
+FREETYPE_PREFIX=/usr
+FREETYPE_STATIC_CFLAGS=-I/usr/include/freetype2;-I/usr/include/libpng16
 FREETYPE_STATIC_CFLAGS_I=
 FREETYPE_STATIC_CFLAGS_OTHER=
+FREETYPE_STATIC_INCLUDE_DIRS=/usr/include/freetype2;/usr/include/libpng16
+FREETYPE_STATIC_LDFLAGS=-lfreetype;-lpng16;-lm;-lz;-lm;-lz
+FREETYPE_STATIC_LDFLAGS_OTHER=
 FREETYPE_STATIC_LIBDIR=
+FREETYPE_STATIC_LIBRARIES=freetype;png16;m;z;m;z
+FREETYPE_STATIC_LIBRARY_DIRS=
 FREETYPE_STATIC_LIBS=
 FREETYPE_STATIC_LIBS_L=
 FREETYPE_STATIC_LIBS_OTHER=
 FREETYPE_STATIC_LIBS_PATHS=
-FREETYPE_VERSION=
+FREETYPE_VERSION=23.1.17
 FREETYPE_freetype2_INCLUDEDIR=
 FREETYPE_freetype2_LIBDIR=
 FREETYPE_freetype2_PREFIX=
@@ -953,27 +964,37 @@ GSTREAMER_riff_gstreamer-riff-1.0_PREFIX=
 GSTREAMER_riff_gstreamer-riff-1.0_VERSION=
 Git_FOUND=TRUE
 Glog_LIBS=Glog_LIBS-NOTFOUND
-HARFBUZZ_CFLAGS=
+HARFBUZZ_CFLAGS=-I/usr/include/harfbuzz;-I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-gnu/glib-2.0/include
 HARFBUZZ_CFLAGS_I=
 HARFBUZZ_CFLAGS_OTHER=
-HARFBUZZ_FOUND=
-HARFBUZZ_INCLUDEDIR=
-HARFBUZZ_LIBDIR=
+HARFBUZZ_FOUND=1
+HARFBUZZ_INCLUDEDIR=/usr/include
+HARFBUZZ_INCLUDE_DIRS=/usr/include/harfbuzz;/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include
+HARFBUZZ_LDFLAGS=-lharfbuzz
+HARFBUZZ_LDFLAGS_OTHER=
+HARFBUZZ_LIBDIR=/usr/lib/x86_64-linux-gnu
+HARFBUZZ_LIBRARIES=harfbuzz
+HARFBUZZ_LIBRARY_DIRS=
 HARFBUZZ_LIBS=
 HARFBUZZ_LIBS_L=
 HARFBUZZ_LIBS_OTHER=
 HARFBUZZ_LIBS_PATHS=
-HARFBUZZ_MODULE_NAME=
-HARFBUZZ_PREFIX=
-HARFBUZZ_STATIC_CFLAGS=
+HARFBUZZ_MODULE_NAME=harfbuzz
+HARFBUZZ_PREFIX=/usr
+HARFBUZZ_STATIC_CFLAGS=-I/usr/include/harfbuzz;-I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-gnu/glib-2.0/include
 HARFBUZZ_STATIC_CFLAGS_I=
 HARFBUZZ_STATIC_CFLAGS_OTHER=
+HARFBUZZ_STATIC_INCLUDE_DIRS=/usr/include/harfbuzz;/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include
+HARFBUZZ_STATIC_LDFLAGS=-lharfbuzz;-lm;-lglib-2.0;-pthread;-lpcre;-pthread;-lgraphite2
+HARFBUZZ_STATIC_LDFLAGS_OTHER=-pthread
 HARFBUZZ_STATIC_LIBDIR=
+HARFBUZZ_STATIC_LIBRARIES=harfbuzz;m;glib-2.0;pcre;graphite2
+HARFBUZZ_STATIC_LIBRARY_DIRS=
 HARFBUZZ_STATIC_LIBS=
 HARFBUZZ_STATIC_LIBS_L=
 HARFBUZZ_STATIC_LIBS_OTHER=
 HARFBUZZ_STATIC_LIBS_PATHS=
-HARFBUZZ_VERSION=
+HARFBUZZ_VERSION=2.6.4
 HARFBUZZ_harfbuzz_INCLUDEDIR=
 HARFBUZZ_harfbuzz_LIBDIR=
 HARFBUZZ_harfbuzz_PREFIX=
@@ -1208,7 +1229,7 @@ HAVE_opencv_dpm=ON
 HAVE_opencv_face=ON
 HAVE_opencv_features2d=ON
 HAVE_opencv_flann=ON
-HAVE_opencv_freetype=OFF
+HAVE_opencv_freetype=ON
 HAVE_opencv_fuzzy=ON
 HAVE_opencv_gapi=ON
 HAVE_opencv_hdf=OFF
@@ -1731,18 +1752,18 @@ OPENCV_LIB_RUNTIME_DIR_RELATIVE_CMAKECONFIG=../lib
 OPENCV_LICENSES_INSTALL_PATH=share/licenses/opencv4
 OPENCV_LICENSE_FILE=/home/linlin/Documents/OpenCV/opencv-4.1.0/LICENSE
 OPENCV_LINKER_LIBS=dl;m;pthread;rt
-OPENCV_MODULES_BUILD=opencv_core;opencv_flann;opencv_imgproc;opencv_java_bindings_generator;opencv_ml;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_quality;opencv_reg;opencv_surface_matching;opencv_xphoto;opencv_dnn;opencv_fuzzy;opencv_gapi;opencv_hfs;opencv_img_hash;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_ts;opencv_bioinspired;opencv_dnn_objdetect;opencv_features2d;opencv_line_descriptor;opencv_saliency;opencv_text;opencv_calib3d;opencv_ccalib;opencv_datasets;opencv_objdetect;opencv_rgbd;opencv_shape;opencv_structured_light;opencv_video;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_aruco;opencv_bgsegm;opencv_dpm;opencv_face;opencv_optflow;opencv_stitching;opencv_superres;opencv_tracking;opencv_python_bindings_generator;opencv_stereo
-OPENCV_MODULES_BUILD_ST=aruco;bgsegm;bioinspired;calib3d;ccalib;core;datasets;dnn;dnn_objdetect;dpm;face;features2d;flann;fuzzy;gapi;hfs;highgui;img_hash;imgcodecs;imgproc;line_descriptor;ml;objdetect;optflow;phase_unwrapping;photo;plot;quality;reg;rgbd;saliency;shape;stereo;stitching;structured_light;superres;surface_matching;text;tracking;ts;video;videoio;videostab;xfeatures2d;ximgproc;xobjdetect;xphoto
-OPENCV_MODULES_CONFIGCMAKE=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_gapi;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dnn_objdetect;opencv_dpm;opencv_face;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_stereo;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
+OPENCV_MODULES_BUILD=opencv_core;opencv_flann;opencv_imgproc;opencv_java_bindings_generator;opencv_ml;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_quality;opencv_reg;opencv_surface_matching;opencv_xphoto;opencv_dnn;opencv_freetype;opencv_fuzzy;opencv_gapi;opencv_hfs;opencv_img_hash;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_ts;opencv_bioinspired;opencv_dnn_objdetect;opencv_features2d;opencv_line_descriptor;opencv_saliency;opencv_text;opencv_calib3d;opencv_ccalib;opencv_datasets;opencv_objdetect;opencv_rgbd;opencv_shape;opencv_structured_light;opencv_video;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_aruco;opencv_bgsegm;opencv_dpm;opencv_face;opencv_optflow;opencv_stitching;opencv_superres;opencv_tracking;opencv_python_bindings_generator;opencv_stereo
+OPENCV_MODULES_BUILD_ST=aruco;bgsegm;bioinspired;calib3d;ccalib;core;datasets;dnn;dnn_objdetect;dpm;face;features2d;flann;freetype;fuzzy;gapi;hfs;highgui;img_hash;imgcodecs;imgproc;line_descriptor;ml;objdetect;optflow;phase_unwrapping;photo;plot;quality;reg;rgbd;saliency;shape;stereo;stitching;structured_light;superres;surface_matching;text;tracking;ts;video;videoio;videostab;xfeatures2d;ximgproc;xobjdetect;xphoto
+OPENCV_MODULES_CONFIGCMAKE=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_gapi;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dnn_objdetect;opencv_dpm;opencv_face;opencv_freetype;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_stereo;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
 OPENCV_MODULES_DISABLED_AUTO=
 OPENCV_MODULES_DISABLED_AUTO_ST=
-OPENCV_MODULES_DISABLED_FORCE=opencv_java;opencv_js;opencv_python2;opencv_python3;opencv_cnn_3dobj;opencv_cudaarithm;opencv_cudabgsegm;opencv_cudacodec;opencv_cudafeatures2d;opencv_cudafilters;opencv_cudaimgproc;opencv_cudalegacy;opencv_cudaobjdetect;opencv_cudaoptflow;opencv_cudastereo;opencv_cudawarping;opencv_cudev;opencv_cvv;opencv_freetype;opencv_hdf;opencv_matlab;opencv_ovis;opencv_sfm;opencv_viz
-OPENCV_MODULES_DISABLED_FORCE_ST=cnn_3dobj;cudaarithm;cudabgsegm;cudacodec;cudafeatures2d;cudafilters;cudaimgproc;cudalegacy;cudaobjdetect;cudaoptflow;cudastereo;cudawarping;cudev;cvv;freetype;hdf;java;js;matlab;ovis;python2;python3;sfm;viz
+OPENCV_MODULES_DISABLED_FORCE=opencv_java;opencv_js;opencv_python2;opencv_python3;opencv_cnn_3dobj;opencv_cudaarithm;opencv_cudabgsegm;opencv_cudacodec;opencv_cudafeatures2d;opencv_cudafilters;opencv_cudaimgproc;opencv_cudalegacy;opencv_cudaobjdetect;opencv_cudaoptflow;opencv_cudastereo;opencv_cudawarping;opencv_cudev;opencv_cvv;opencv_hdf;opencv_matlab;opencv_ovis;opencv_sfm;opencv_viz
+OPENCV_MODULES_DISABLED_FORCE_ST=cnn_3dobj;cudaarithm;cudabgsegm;cudacodec;cudafeatures2d;cudafilters;cudaimgproc;cudalegacy;cudaobjdetect;cudaoptflow;cudastereo;cudawarping;cudev;cvv;hdf;java;js;matlab;ovis;python2;python3;sfm;viz
 OPENCV_MODULES_DISABLED_USER=opencv_world
 OPENCV_MODULES_DISABLED_USER_ST=world
 OPENCV_MODULES_EXTRA=aruco;bgsegm;bioinspired;ccalib;cnn_3dobj;cudaarithm;cudabgsegm;cudacodec;cudafeatures2d;cudafilters;cudaimgproc;cudalegacy;cudaobjdetect;cudaoptflow;cudastereo;cudawarping;cudev;cvv;datasets;dnn_objdetect;dpm;face;freetype;fuzzy;hdf;hfs;img_hash;java_bindings_generator;line_descriptor;matlab;optflow;ovis;phase_unwrapping;plot;python2;python3;python_bindings_generator;quality;reg;rgbd;saliency;sfm;shape;stereo;structured_light;superres;surface_matching;text;tracking;videostab;viz;xfeatures2d;ximgproc;xobjdetect;xphoto
 OPENCV_MODULES_MAIN=core;imgproc;imgcodecs;videoio;highgui;video;calib3d;features2d;objdetect;dnn;ml;flann;photo;stitching;gapi;java;js;ts;world
-OPENCV_MODULES_PUBLIC=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_gapi;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dnn_objdetect;opencv_dpm;opencv_face;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_stereo;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
+OPENCV_MODULES_PUBLIC=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_gapi;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dnn_objdetect;opencv_dpm;opencv_face;opencv_freetype;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_stereo;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
 OPENCV_MODULE_DEFINITIONS_CONFIGMAKE=#define HAVE_OPENCV_ARUCO
 #define HAVE_OPENCV_BGSEGM
 #define HAVE_OPENCV_BIOINSPIRED
@@ -1756,6 +1777,7 @@ OPENCV_MODULE_DEFINITIONS_CONFIGMAKE=#define HAVE_OPENCV_ARUCO
 #define HAVE_OPENCV_FACE
 #define HAVE_OPENCV_FEATURES2D
 #define HAVE_OPENCV_FLANN
+#define HAVE_OPENCV_FREETYPE
 #define HAVE_OPENCV_FUZZY
 #define HAVE_OPENCV_GAPI
 #define HAVE_OPENCV_HFS
@@ -2026,7 +2048,23 @@ OPENCV_MODULE_opencv_flann_PRIVATE_REQ_DEPS=
 OPENCV_MODULE_opencv_flann_REQ_DEPS=opencv_core
 OPENCV_MODULE_opencv_flann_SOURCES=/home/linlin/Documents/OpenCV/opencv-4.1.0/modules/flann/src/flann.cpp;/home/linlin/Documents/OpenCV/opencv-4.1.0/modules/flann/src/miniflann.cpp;/home/linlin/Documents/OpenCV/opencv-4.1.0/modules/flann/src/precomp.hpp
 OPENCV_MODULE_opencv_flann_WRAPPERS=python_bindings_generator;python2;python3
+OPENCV_MODULE_opencv_freetype_BINARY_DIR=/home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/freetype
+OPENCV_MODULE_opencv_freetype_CLASS=PUBLIC
+OPENCV_MODULE_opencv_freetype_DEPS=opencv_core;opencv_imgproc
+OPENCV_MODULE_opencv_freetype_DEPS_EXT=
+OPENCV_MODULE_opencv_freetype_DEPS_TO_LINK=opencv_core;opencv_imgproc
+OPENCV_MODULE_opencv_freetype_DESCRIPTION=FreeType module. It enables to draw strings with outlines and mono-bitmaps/gray-bitmaps.
+OPENCV_MODULE_opencv_freetype_HEADERS=/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/freetype/include/opencv2/freetype.hpp
+OPENCV_MODULE_opencv_freetype_IS_PART_OF_WORLD=ON
+OPENCV_MODULE_opencv_freetype_LABEL=Extra;opencv_freetype
+OPENCV_MODULE_opencv_freetype_LINK_DEPS=
 OPENCV_MODULE_opencv_freetype_LOCATION=/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/freetype
+OPENCV_MODULE_opencv_freetype_OPT_DEPS=
+OPENCV_MODULE_opencv_freetype_PRIVATE_OPT_DEPS=
+OPENCV_MODULE_opencv_freetype_PRIVATE_REQ_DEPS=
+OPENCV_MODULE_opencv_freetype_REQ_DEPS=opencv_core;opencv_imgproc
+OPENCV_MODULE_opencv_freetype_SOURCES=/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/freetype/src/freetype.cpp;/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/freetype/src/precomp.hpp
+OPENCV_MODULE_opencv_freetype_WRAPPERS=python_bindings_generator;python2;python3
 OPENCV_MODULE_opencv_fuzzy_BINARY_DIR=/home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/fuzzy
 OPENCV_MODULE_opencv_fuzzy_CLASS=PUBLIC
 OPENCV_MODULE_opencv_fuzzy_DEPS=opencv_core;opencv_imgproc
@@ -2296,28 +2334,28 @@ OPENCV_MODULE_opencv_plot_REQ_DEPS=opencv_core;opencv_imgproc
 OPENCV_MODULE_opencv_plot_SOURCES=/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/plot/src/plot.cpp;/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/plot/src/precomp.hpp
 OPENCV_MODULE_opencv_plot_WRAPPERS=java;python_bindings_generator;python2;python3
 OPENCV_MODULE_opencv_python2_LOCATION=/home/linlin/Documents/OpenCV/opencv-4.1.0/modules/python/python2
-OPENCV_MODULE_opencv_python2_OPT_DEPS=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dpm;opencv_face;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
+OPENCV_MODULE_opencv_python2_OPT_DEPS=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dpm;opencv_face;opencv_freetype;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
 OPENCV_MODULE_opencv_python2_PRIVATE_OPT_DEPS=
 OPENCV_MODULE_opencv_python2_PRIVATE_REQ_DEPS=
 OPENCV_MODULE_opencv_python2_REQ_DEPS=
 OPENCV_MODULE_opencv_python2_WRAPPERS=
 OPENCV_MODULE_opencv_python3_LOCATION=/home/linlin/Documents/OpenCV/opencv-4.1.0/modules/python/python3
-OPENCV_MODULE_opencv_python3_OPT_DEPS=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dpm;opencv_face;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
+OPENCV_MODULE_opencv_python3_OPT_DEPS=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dpm;opencv_face;opencv_freetype;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
 OPENCV_MODULE_opencv_python3_PRIVATE_OPT_DEPS=
 OPENCV_MODULE_opencv_python3_PRIVATE_REQ_DEPS=
 OPENCV_MODULE_opencv_python3_REQ_DEPS=
 OPENCV_MODULE_opencv_python3_WRAPPERS=
 OPENCV_MODULE_opencv_python_bindings_generator_BINARY_DIR=/home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/python_bindings_generator
 OPENCV_MODULE_opencv_python_bindings_generator_CLASS=INTERNAL
-OPENCV_MODULE_opencv_python_bindings_generator_DEPS=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_quality;opencv_reg;opencv_surface_matching;opencv_xphoto;opencv_dnn;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_bioinspired;opencv_features2d;opencv_line_descriptor;opencv_saliency;opencv_text;opencv_calib3d;opencv_ccalib;opencv_datasets;opencv_objdetect;opencv_rgbd;opencv_shape;opencv_structured_light;opencv_video;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_aruco;opencv_bgsegm;opencv_dpm;opencv_face;opencv_optflow;opencv_stitching;opencv_superres;opencv_tracking
+OPENCV_MODULE_opencv_python_bindings_generator_DEPS=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_quality;opencv_reg;opencv_surface_matching;opencv_xphoto;opencv_dnn;opencv_freetype;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_bioinspired;opencv_features2d;opencv_line_descriptor;opencv_saliency;opencv_text;opencv_calib3d;opencv_ccalib;opencv_datasets;opencv_objdetect;opencv_rgbd;opencv_shape;opencv_structured_light;opencv_video;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_aruco;opencv_bgsegm;opencv_dpm;opencv_face;opencv_optflow;opencv_stitching;opencv_superres;opencv_tracking
 OPENCV_MODULE_opencv_python_bindings_generator_DEPS_EXT=
-OPENCV_MODULE_opencv_python_bindings_generator_DEPS_TO_LINK=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_quality;opencv_reg;opencv_surface_matching;opencv_xphoto;opencv_dnn;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_bioinspired;opencv_features2d;opencv_line_descriptor;opencv_saliency;opencv_text;opencv_calib3d;opencv_ccalib;opencv_datasets;opencv_objdetect;opencv_rgbd;opencv_shape;opencv_structured_light;opencv_video;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_aruco;opencv_bgsegm;opencv_dpm;opencv_face;opencv_optflow;opencv_stitching;opencv_superres;opencv_tracking
+OPENCV_MODULE_opencv_python_bindings_generator_DEPS_TO_LINK=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_quality;opencv_reg;opencv_surface_matching;opencv_xphoto;opencv_dnn;opencv_freetype;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_bioinspired;opencv_features2d;opencv_line_descriptor;opencv_saliency;opencv_text;opencv_calib3d;opencv_ccalib;opencv_datasets;opencv_objdetect;opencv_rgbd;opencv_shape;opencv_structured_light;opencv_video;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_aruco;opencv_bgsegm;opencv_dpm;opencv_face;opencv_optflow;opencv_stitching;opencv_superres;opencv_tracking
 OPENCV_MODULE_opencv_python_bindings_generator_DESCRIPTION=The python_bindings_generator OpenCV module
 OPENCV_MODULE_opencv_python_bindings_generator_IS_PART_OF_WORLD=OFF
 OPENCV_MODULE_opencv_python_bindings_generator_LABEL=Main;opencv_python_bindings_generator
 OPENCV_MODULE_opencv_python_bindings_generator_LINK_DEPS=
 OPENCV_MODULE_opencv_python_bindings_generator_LOCATION=/home/linlin/Documents/OpenCV/opencv-4.1.0/modules/python/bindings
-OPENCV_MODULE_opencv_python_bindings_generator_OPT_DEPS=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dpm;opencv_face;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
+OPENCV_MODULE_opencv_python_bindings_generator_OPT_DEPS=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dpm;opencv_face;opencv_freetype;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
 OPENCV_MODULE_opencv_python_bindings_generator_PRIVATE_OPT_DEPS=
 OPENCV_MODULE_opencv_python_bindings_generator_PRIVATE_REQ_DEPS=
 OPENCV_MODULE_opencv_python_bindings_generator_REQ_DEPS=
@@ -2602,7 +2640,7 @@ OPENCV_MODULE_opencv_world_IS_PART_OF_WORLD=OFF
 OPENCV_MODULE_opencv_world_LABEL=Main;opencv_world
 OPENCV_MODULE_opencv_world_LINK_DEPS=
 OPENCV_MODULE_opencv_world_LOCATION=/home/linlin/Documents/OpenCV/opencv-4.1.0/modules/world
-OPENCV_MODULE_opencv_world_OPT_DEPS=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_gapi;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dnn_objdetect;opencv_dpm;opencv_face;opencv_fuzzy;opencv_hfs;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_stereo;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
+OPENCV_MODULE_opencv_world_OPT_DEPS=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_gapi;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dnn_objdetect;opencv_dpm;opencv_face;opencv_freetype;opencv_fuzzy;opencv_hfs;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_stereo;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
 OPENCV_MODULE_opencv_world_PRIVATE_OPT_DEPS=
 OPENCV_MODULE_opencv_world_PRIVATE_REQ_DEPS=
 OPENCV_MODULE_opencv_world_REQ_DEPS=opencv_core
@@ -2675,7 +2713,7 @@ OPENCV_MODULE_opencv_xphoto_PRIVATE_REQ_DEPS=
 OPENCV_MODULE_opencv_xphoto_REQ_DEPS=opencv_core;opencv_imgproc;opencv_photo
 OPENCV_MODULE_opencv_xphoto_SOURCES=/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/xphoto/src/bm3d_image_denoising.cpp;/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/xphoto/src/dct_image_denoising.cpp;/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/xphoto/src/grayworld_white_balance.cpp;/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/xphoto/src/inpainting.cpp;/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/xphoto/src/learning_based_color_balance.cpp;/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/xphoto/src/oilpainting.cpp;/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/xphoto/src/simple_color_balance.cpp;/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/xphoto/src/tonemap.cpp;/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/xphoto/src/advanced_types.hpp;/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/xphoto/src/annf.hpp;/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/xphoto/src/blending.hpp;/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/xphoto/src/bm3d_denoising_invoker_commons.hpp;/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/xphoto/src/bm3d_denoising_invoker_step1.hpp;/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/xphoto/src/bm3d_denoising_invoker_step2.hpp;/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/xphoto/src/bm3d_denoising_invoker_structs.hpp;/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/xphoto/src/bm3d_denoising_transforms.hpp;/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/xphoto/src/bm3d_denoising_transforms_1D.hpp;/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/xphoto/src/bm3d_denoising_transforms_2D.hpp;/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/xphoto/src/bm3d_denoising_transforms_haar.hpp;/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/xphoto/src/gcgraph.hpp;/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/xphoto/src/kaiser_window.hpp;/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/xphoto/src/learning_based_color_balance_model.hpp;/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/xphoto/src/norm2.hpp;/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/xphoto/src/photomontage.hpp;/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/xphoto/src/whs.hpp
 OPENCV_MODULE_opencv_xphoto_WRAPPERS=java;python_bindings_generator;python2;python3
-OPENCV_MOD_LIST=opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_calib3d;opencv_ccalib;opencv_core;opencv_datasets;opencv_dnn;opencv_dnn_objdetect;opencv_dpm;opencv_face;opencv_features2d;opencv_flann;opencv_fuzzy;opencv_gapi;opencv_hfs;opencv_highgui;opencv_img_hash;opencv_imgcodecs;opencv_imgproc;opencv_line_descriptor;opencv_ml;opencv_objdetect;opencv_optflow;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_stereo;opencv_stitching;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_video;opencv_videoio;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
+OPENCV_MOD_LIST=opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_calib3d;opencv_ccalib;opencv_core;opencv_datasets;opencv_dnn;opencv_dnn_objdetect;opencv_dpm;opencv_face;opencv_features2d;opencv_flann;opencv_freetype;opencv_fuzzy;opencv_gapi;opencv_hfs;opencv_highgui;opencv_img_hash;opencv_imgcodecs;opencv_imgproc;opencv_line_descriptor;opencv_ml;opencv_objdetect;opencv_optflow;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_stereo;opencv_stitching;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_video;opencv_videoio;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
 OPENCV_OTHER_INSTALL_PATH=share/opencv4
 OPENCV_PYTHON3_VERSION=OFF
 OPENCV_PYTHON_BINDINGS_DIR=/home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/python_bindings_generator
@@ -2794,7 +2832,7 @@ OpenBLAS_INCLUDE_DIR=OpenBLAS_INCLUDE_DIR-NOTFOUND
 OpenBLAS_LIB=OpenBLAS_LIB-NOTFOUND
 OpenCL_INCLUDE_DIR=OpenCL_INCLUDE_DIR-NOTFOUND
 OpenCL_LIBRARY=OpenCL_LIBRARY-NOTFOUND
-OpenCVModules_TARGETS=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_quality;opencv_reg;opencv_surface_matching;opencv_xphoto;opencv_dnn;opencv_fuzzy;opencv_gapi;opencv_hfs;opencv_img_hash;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_bioinspired;opencv_dnn_objdetect;opencv_features2d;opencv_line_descriptor;opencv_saliency;opencv_text;opencv_calib3d;opencv_ccalib;opencv_datasets;opencv_objdetect;opencv_rgbd;opencv_shape;opencv_structured_light;opencv_video;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_aruco;opencv_bgsegm;opencv_dpm;opencv_face;opencv_optflow;opencv_stitching;opencv_superres;opencv_tracking;opencv_stereo
+OpenCVModules_TARGETS=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_quality;opencv_reg;opencv_surface_matching;opencv_xphoto;opencv_dnn;opencv_freetype;opencv_fuzzy;opencv_gapi;opencv_hfs;opencv_img_hash;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_bioinspired;opencv_dnn_objdetect;opencv_features2d;opencv_line_descriptor;opencv_saliency;opencv_text;opencv_calib3d;opencv_ccalib;opencv_datasets;opencv_objdetect;opencv_rgbd;opencv_shape;opencv_structured_light;opencv_video;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_aruco;opencv_bgsegm;opencv_dpm;opencv_face;opencv_optflow;opencv_stitching;opencv_superres;opencv_tracking;opencv_stereo
 OpenCV_BINARY_DIR=/home/linlin/Documents/OpenCV/opencv-4.1.0/build
 OpenCV_DESCRIPTION=
 OpenCV_HAL=OpenCV_HAL
@@ -2916,18 +2954,18 @@ TIFF_VERSION_LINES=#define TIFF_VERSION_CLASSIC 42;#define TIFF_VERSION_BIG 43
 TIFF_VERSION_STRING=4.0.10
 TRY_OUT=Change Dir: /home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_ebe05/fast && /usr/bin/make -f CMakeFiles/cmTC_ebe05.dir/build.make CMakeFiles/cmTC_ebe05.dir/build
+Run Build Command(s):/usr/bin/make cmTC_77f98/fast && /usr/bin/make -f CMakeFiles/cmTC_77f98.dir/build.make CMakeFiles/cmTC_77f98.dir/build
 make[1]: Entering directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_ebe05.dir/opencl.cpp.o
-/toolchain/bin/riscv64-unknown-linux-gnu-g++   -I/home/linlin/Documents/OpenCV/opencv-4.1.0/3rdparty/include/opencl/1.2  -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden  -O3 -DNDEBUG -fPIE   -std=c++11 -o CMakeFiles/cmTC_ebe05.dir/opencl.cpp.o -c /home/linlin/Documents/OpenCV/opencv-4.1.0/cmake/checks/opencl.cpp
+Building CXX object CMakeFiles/cmTC_77f98.dir/opencl.cpp.o
+/toolchain/bin/riscv64-unknown-linux-gnu-g++   -I/home/linlin/Documents/OpenCV/opencv-4.1.0/3rdparty/include/opencl/1.2  -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden  -O3 -DNDEBUG -fPIE   -std=c++11 -o CMakeFiles/cmTC_77f98.dir/opencl.cpp.o -c /home/linlin/Documents/OpenCV/opencv-4.1.0/cmake/checks/opencl.cpp
 cc1plus: warning: command-line option '-Wmissing-prototypes' is valid for C/ObjC but not for C++
 cc1plus: warning: command-line option '-Wstrict-prototypes' is valid for C/ObjC but not for C++
 /home/linlin/Documents/OpenCV/opencv-4.1.0/cmake/checks/opencl.cpp:6:2: error: #error OpenCL is valid
     6 | #error OpenCL is valid
       |  ^~~~~
-make[1]: *** [CMakeFiles/cmTC_ebe05.dir/build.make:66: CMakeFiles/cmTC_ebe05.dir/opencl.cpp.o] Error 1
+make[1]: *** [CMakeFiles/cmTC_77f98.dir/build.make:66: CMakeFiles/cmTC_77f98.dir/opencl.cpp.o] Error 1
 make[1]: Leaving directory '/home/linlin/Documents/OpenCV/opencv-4.1.0/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_ebe05/fast] Error 2
+make: *** [Makefile:121: cmTC_77f98/fast] Error 2
 
 
 Threads_FOUND=TRUE
@@ -3198,7 +3236,7 @@ dep=
 deps=opencv_core;opencv_imgproc;opencv_photo
 deps_3rdparty=
 deps_extra=dl;m;pthread;rt
-deps_modules=opencv_gapi;opencv_stitching;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_dnn_objdetect;opencv_dpm;opencv_face;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_stereo;opencv_structured_light;opencv_phase_unwrapping;opencv_superres;opencv_optflow;opencv_surface_matching;opencv_tracking;opencv_datasets;opencv_text;opencv_dnn;opencv_plot;opencv_videostab;opencv_video;opencv_xfeatures2d;opencv_shape;opencv_ml;opencv_ximgproc;opencv_xobjdetect;opencv_objdetect;opencv_calib3d;opencv_features2d;opencv_highgui;opencv_videoio;opencv_imgcodecs;opencv_flann;opencv_xphoto;opencv_photo;opencv_imgproc;opencv_core
+deps_modules=opencv_gapi;opencv_stitching;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_dnn_objdetect;opencv_dpm;opencv_face;opencv_freetype;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_stereo;opencv_structured_light;opencv_phase_unwrapping;opencv_superres;opencv_optflow;opencv_surface_matching;opencv_tracking;opencv_datasets;opencv_text;opencv_dnn;opencv_plot;opencv_videostab;opencv_video;opencv_xfeatures2d;opencv_shape;opencv_ml;opencv_ximgproc;opencv_xobjdetect;opencv_objdetect;opencv_calib3d;opencv_features2d;opencv_highgui;opencv_videoio;opencv_imgcodecs;opencv_flann;opencv_xphoto;opencv_photo;opencv_imgproc;opencv_core
 dir=
 dnn_samples_BINARY_DIR=/home/linlin/Documents/OpenCV/opencv-4.1.0/build/samples/dnn
 dnn_samples_SOURCE_DIR=/home/linlin/Documents/OpenCV/opencv-4.1.0/samples/dnn
@@ -3280,6 +3318,9 @@ opencv_features2d_SOURCE_DIR=/home/linlin/Documents/OpenCV/opencv-4.1.0/modules/
 opencv_flann_BINARY_DIR=/home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/flann
 opencv_flann_LIB_DEPENDS=general;opencv_core;general;dl;general;m;general;pthread;general;rt;
 opencv_flann_SOURCE_DIR=/home/linlin/Documents/OpenCV/opencv-4.1.0/modules/flann
+opencv_freetype_BINARY_DIR=/home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/freetype
+opencv_freetype_LIB_DEPENDS=general;opencv_core;general;opencv_imgproc;general;dl;general;m;general;pthread;general;rt;general;freetype;general;harfbuzz;
+opencv_freetype_SOURCE_DIR=/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/freetype
 opencv_fuzzy_BINARY_DIR=/home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/fuzzy
 opencv_fuzzy_LIB_DEPENDS=general;opencv_core;general;opencv_imgproc;general;dl;general;m;general;pthread;general;rt;
 opencv_fuzzy_SOURCE_DIR=/home/linlin/Documents/OpenCV/opencv_contrib-4.1.0/modules/fuzzy
@@ -3399,6 +3440,9 @@ openexr_SOURCE_DIR=/home/linlin/Documents/OpenCV/opencv-4.1.0/3rdparty/openexr
 p=
 packbits=ON
 parallel_status=pthreads
+pkgcfg_lib_FREETYPE_freetype=pkgcfg_lib_FREETYPE_freetype-NOTFOUND
+pkgcfg_lib_HARFBUZZ_harfbuzz=pkgcfg_lib_HARFBUZZ_harfbuzz-NOTFOUND
+prefix_result=/usr/lib/x86_64-linux-gnu
 quirc_BINARY_DIR=/home/linlin/Documents/OpenCV/opencv-4.1.0/build/3rdparty/quirc
 quirc_SOURCE_DIR=/home/linlin/Documents/OpenCV/opencv-4.1.0/3rdparty/quirc
 s=

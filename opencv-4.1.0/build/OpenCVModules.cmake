@@ -16,7 +16,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_targetsDefined)
 set(_targetsNotDefined)
 set(_expectedTargets)
-foreach(_expectedTarget opencv_core opencv_flann opencv_imgproc opencv_ml opencv_phase_unwrapping opencv_photo opencv_plot opencv_quality opencv_reg opencv_surface_matching opencv_xphoto opencv_dnn opencv_fuzzy opencv_gapi opencv_hfs opencv_img_hash opencv_imgcodecs opencv_videoio opencv_highgui opencv_bioinspired opencv_dnn_objdetect opencv_features2d opencv_line_descriptor opencv_saliency opencv_text opencv_calib3d opencv_ccalib opencv_datasets opencv_objdetect opencv_rgbd opencv_shape opencv_structured_light opencv_video opencv_videostab opencv_xfeatures2d opencv_ximgproc opencv_xobjdetect opencv_aruco opencv_bgsegm opencv_dpm opencv_face opencv_optflow opencv_stitching opencv_superres opencv_tracking opencv_stereo)
+foreach(_expectedTarget opencv_core opencv_flann opencv_imgproc opencv_ml opencv_phase_unwrapping opencv_photo opencv_plot opencv_quality opencv_reg opencv_surface_matching opencv_xphoto opencv_dnn opencv_freetype opencv_fuzzy opencv_gapi opencv_hfs opencv_img_hash opencv_imgcodecs opencv_videoio opencv_highgui opencv_bioinspired opencv_dnn_objdetect opencv_features2d opencv_line_descriptor opencv_saliency opencv_text opencv_calib3d opencv_ccalib opencv_datasets opencv_objdetect opencv_rgbd opencv_shape opencv_structured_light opencv_video opencv_videostab opencv_xfeatures2d opencv_ximgproc opencv_xobjdetect opencv_aruco opencv_bgsegm opencv_dpm opencv_face opencv_optflow opencv_stitching opencv_superres opencv_tracking opencv_stereo)
   list(APPEND _expectedTargets ${_expectedTarget})
   if(NOT TARGET ${_expectedTarget})
     list(APPEND _targetsNotDefined ${_expectedTarget})
@@ -118,6 +118,13 @@ set_target_properties(opencv_xphoto PROPERTIES
 add_library(opencv_dnn SHARED IMPORTED)
 
 set_target_properties(opencv_dnn PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc"
+)
+
+# Create imported target opencv_freetype
+add_library(opencv_freetype SHARED IMPORTED)
+
+set_target_properties(opencv_freetype PROPERTIES
   INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc"
 )
 
@@ -441,6 +448,13 @@ set_property(TARGET opencv_dnn APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_dnn PROPERTIES
   IMPORTED_LOCATION_RELEASE "/home/linlin/Documents/OpenCV/opencv-4.1.0/build/lib/libopencv_dnn.so.4.1.0"
   IMPORTED_SONAME_RELEASE "libopencv_dnn.so.4.1"
+  )
+
+# Import target "opencv_freetype" for configuration "Release"
+set_property(TARGET opencv_freetype APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_freetype PROPERTIES
+  IMPORTED_LOCATION_RELEASE "/home/linlin/Documents/OpenCV/opencv-4.1.0/build/lib/libopencv_freetype.so.4.1.0"
+  IMPORTED_SONAME_RELEASE "libopencv_freetype.so.4.1"
   )
 
 # Import target "opencv_fuzzy" for configuration "Release"

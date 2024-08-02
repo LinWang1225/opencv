@@ -961,6 +961,16 @@
 /home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/dnn/CMakeFiles/package.dir
 /home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/dnn/CMakeFiles/opencv_test_dnn.dir
 /home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/dnn/CMakeFiles/opencv_dnn.dir
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/freetype/CMakeFiles/install/strip.dir
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/freetype/CMakeFiles/install/local.dir
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/freetype/CMakeFiles/edit_cache.dir
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/freetype/CMakeFiles/test.dir
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/freetype/CMakeFiles/package_source.dir
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/freetype/CMakeFiles/install.dir
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/freetype/CMakeFiles/list_install_components.dir
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/freetype/CMakeFiles/rebuild_cache.dir
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/freetype/CMakeFiles/package.dir
+/home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/freetype/CMakeFiles/opencv_freetype.dir
 /home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/fuzzy/CMakeFiles/install/strip.dir
 /home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/fuzzy/CMakeFiles/opencv_fuzzy.dir
 /home/linlin/Documents/OpenCV/opencv-4.1.0/build/modules/fuzzy/CMakeFiles/package_source.dir
